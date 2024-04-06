@@ -49,6 +49,14 @@ namespace args {
                             throw std::invalid_argument("Key file not specified.");
                         }
                         case a: {
+	                        if (j + 1 < argc) {
+		                        if (std::string value = argv[++j]; !value.starts_with('-')) {
+			                        if (value == "bf") {
+										this->analize_mode_ = BRUTE_FORCE;
+									}
+			                        break;
+		                        }
+	                        }
                             break;
                         }
                         default: break;

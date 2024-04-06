@@ -27,8 +27,13 @@ namespace args {
         ENCRYPT, DECRYPT, NONE
     };
 
+	enum AnalizeMode {
+		NO_ANALIZE, BRUTE_FORCE
+	};
+
     class Arguments {
         EncryptMode encrypt_mode_ = EncryptMode::NONE;
+	    AnalizeMode analize_mode_ = AnalizeMode::NO_ANALIZE;
         std::string inputFile_;
         std::string outputFile_;
         std::string keyFile_;
@@ -52,13 +57,18 @@ namespace args {
             return keyFile_;
         }
 
-        friend std::ostream &operator<<(std::ostream &os, const Arguments &obj) {
+	    [[nodiscard]] AnalizeMode getAnalizeMode() const {
+		    return analize_mode_;
+	    }
+
+	    friend std::ostream &operator<<(std::ostream &os, const Arguments &obj) {
             return os
                    << "[" << std::endl
                    << "encrypt_mode_: " << obj.encrypt_mode_ << std::endl
                    << "inputFile_: " << obj.inputFile_ << std::endl
                    << "outputFile_: " << obj.outputFile_ << std::endl
                    << "keyFile_: " << obj.keyFile_ << std::endl
+                   << "analize_mode_: " << obj.analize_mode_ << std::endl
                    << "]" << std::endl;
         }
     };

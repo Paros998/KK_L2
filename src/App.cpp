@@ -40,7 +40,17 @@ void App::processInput() {
 void App::run() {
     processInput();
 
+	analizeEncryptedData();
+
 	if (this->app_args_.encrypt_mode() != args::NONE) {
 		std::cout << (this->app_args_.encrypt_mode() == 0 ? "Encryption completed." : "Decryption completed");
+	}
+}
+
+void App::analizeEncryptedData() {
+	if (this->app_args_.encrypt_mode() == args::NONE && this->app_args_.getAnalizeMode() == args::BRUTE_FORCE) {
+		// test all keys until x^2 is eq or lower than 0.05
+
+
 	}
 }
