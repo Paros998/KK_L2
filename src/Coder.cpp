@@ -11,7 +11,7 @@ namespace enc {
 			return static_cast<char>(movedKey);
 		}
 
-	    return static_cast<char>(65 + (movedKey - 90));
+	    return static_cast<char>(65 + ((movedKey - 90) % 26));
     }
 
     char Coder::decodeChar(const char in) const {
@@ -20,7 +20,7 @@ namespace enc {
 		    return static_cast<char>(movedKey);
 	    }
 
-	    return static_cast<char>(90 - (65 - movedKey));
+	    return static_cast<char>(90 - ((65 - movedKey) % 26));
     }
 
     string Coder::sanitize(const string &in) {

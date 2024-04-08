@@ -8,6 +8,8 @@
 #include "Libraries.h"
 
 namespace args {
+    static const std::string EnMonogramsFile = "../data/english_monograms.txt";
+
     static const std::string D_FLAG = "-d";
     static const std::string E_FLAG = "-e";
     static const std::string I_FLAG = "-i";
@@ -27,14 +29,15 @@ namespace args {
         ENCRYPT, DECRYPT, NONE
     };
 
-	enum AnalizeMode {
-		NO_ANALIZE, BRUTE_FORCE
+	enum CrackEncMode {
+		NO_CRACK, BRUTE_FORCE
 	};
 
     class Arguments {
         EncryptMode encrypt_mode_ = EncryptMode::NONE;
-	    AnalizeMode analize_mode_ = AnalizeMode::NO_ANALIZE;
+	    CrackEncMode crack_mode_ = CrackEncMode::NO_CRACK;
         std::string inputFile_;
+        std::string tmpInputFile_ = "../data/tmp.txt";
         std::string outputFile_;
         std::string keyFile_;
 
@@ -57,18 +60,22 @@ namespace args {
             return keyFile_;
         }
 
-	    [[nodiscard]] AnalizeMode getAnalizeMode() const {
-		    return analize_mode_;
+	    [[nodiscard]] CrackEncMode getCrackEncMode() const {
+		    return crack_mode_;
+	    }
+
+	    [[nodiscard]] std::string tmpInputFile() const {
+		    return tmpInputFile_;
 	    }
 
 	    friend std::ostream &operator<<(std::ostream &os, const Arguments &obj) {
             return os
-                   << "[" << std::endl
-                   << "encrypt_mode_: " << obj.encrypt_mode_ << std::endl
-                   << "inputFile_: " << obj.inputFile_ << std::endl
-                   << "outputFile_: " << obj.outputFile_ << std::endl
-                   << "keyFile_: " << obj.keyFile_ << std::endl
-                   << "analize_mode_: " << obj.analize_mode_ << std::endl
+		            << "[" << std::endl
+		            << "encrypt_mode_: " << obj.encrypt_mode_ << std::endl
+		            << "inputFile_: " << obj.inputFile_ << std::endl
+		            << "outputFile_: " << obj.outputFile_ << std::endl
+		            << "keyFile_: " << obj.keyFile_ << std::endl
+		            << "analize_mode_: " << obj.crack_mode_ << std::endl
                    << "]" << std::endl;
         }
     };

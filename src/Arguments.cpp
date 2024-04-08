@@ -52,7 +52,11 @@ namespace args {
 	                        if (j + 1 < argc) {
 		                        if (std::string value = argv[++j]; !value.starts_with('-')) {
 			                        if (value == "bf") {
-										this->analize_mode_ = BRUTE_FORCE;
+										this->crack_mode_ = BRUTE_FORCE;
+									}
+
+									if (this->crack_mode_ == NO_CRACK) {
+										throw std::invalid_argument("Crack encoding mode not specified.");
 									}
 			                        break;
 		                        }
@@ -65,7 +69,7 @@ namespace args {
                 }
             }
         }
-        if (!encryptionModeIntitialized) {
+        if (!encryptionModeIntitialized && this->crack_mode_ == NO_CRACK) {
             throw std::invalid_argument("Encrypt/Decrypt mode not specified. Check program parameters.");
         }
     }

@@ -16,17 +16,18 @@ class App {
 
     [[nodiscard]] int extractKey() const;
 
-public:
-    explicit App(args::Arguments app_args);
+	static std::map<std::string, double> initializeBaseEnMonogramsData();
 
     void processInput();
 
+	void tryToCrackTheEncoding();
+public:
+    explicit App(args::Arguments app_args);
+
     void run();
 
-    ~App() {
-    };
+    ~App() = default;
 
-	void analizeEncryptedData();
 };
 
 
