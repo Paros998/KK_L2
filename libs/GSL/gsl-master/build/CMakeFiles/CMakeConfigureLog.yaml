@@ -1,0 +1,1952 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:41 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:41 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.exe"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/3.29.1/CompilerIdC/a.exe
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:41 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/g++.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.exe"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/3.29.1/CompilerIdCXX/a.exe
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:41 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6t0ouk"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6t0ouk"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6t0ouk'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_ee538
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee538.dir/'
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ee538.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\part4\\AppData\\Local\\Temp\\ccm2MnNT.s
+        GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
+        ignoring nonexistent directory "/win/include"
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee538.dir/'
+         as -v -o CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj C:\\Users\\part4\\AppData\\Local\\Temp\\ccm2MnNT.s
+        GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
+        COMPILER_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -v -Wl,-v CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj -o cmTC_ee538.exe -Wl,--out-implib,libcmTC_ee538.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe
+        COLLECT_LTO_WRAPPER=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COMPILER_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee538.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_ee538.'
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_ee538.exe C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_ee538.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        collect2 version 13.1.0
+        C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin/ld.exe -m i386pep -Bdynamic -o cmTC_ee538.exe C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_ee538.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        GNU ld (GNU Binutils) 2.40
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee538.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_ee538.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:134 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:41 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/include]
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/include;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:41 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6t0ouk']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_ee538]
+        ignore line: [[1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -v -o CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee538.dir/']
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ee538.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -o C:\\Users\\part4\\AppData\\Local\\Temp\\ccm2MnNT.s]
+        ignore line: [GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/win/include"]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee538.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj C:\\Users\\part4\\AppData\\Local\\Temp\\ccm2MnNT.s]
+        ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
+        ignore line: [COMPILER_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe  -v -Wl -v CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj -o cmTC_ee538.exe -Wl --out-implib libcmTC_ee538.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COMPILER_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee538.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_ee538.']
+        link line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_ee538.exe C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_ee538.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_ee538.exe] ==> ignore
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_ee538.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-liconv] ==> lib [iconv]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lgcc_eh] ==> lib [gcc_eh]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [collect2 version 13.1.0]
+        ignore line: [C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin/ld.exe -m i386pep -Bdynamic -o cmTC_ee538.exe C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_ee538.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_ee538.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        linker tool for 'C': C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/ld.exe
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        remove lib [gcc_eh]
+        remove lib [msvcrt]
+        collapse obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+        collapse obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
+        collapse obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit libs: [mingw32;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc;moldname;mingwex;kernel32]
+        implicit objs: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        implicit dirs: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:41 (project)"
+    message: |
+      Running the C compiler's linker: "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/ld.exe" "-v"
+      GNU ld (GNU Binutils) 2.40
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:64 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:41 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-o3crip"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-o3crip"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE_CXX: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/cxx_flag_overrides.cmake"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-o3crip'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_f6cc2
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -v -o CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp"
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f6cc2.dir/'
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f6cc2.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\part4\\AppData\\Local\\Temp\\ccqk73pb.s
+        GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
+        	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"
+        ignoring nonexistent directory "/win/include"
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"
+        ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"
+        ignoring nonexistent directory "/mingw/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
+        End of search list.
+        Compiler executable checksum: e75de627edc3c57e31324b930b15b056
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f6cc2.dir/'
+         as -v -o CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\part4\\AppData\\Local\\Temp\\ccqk73pb.s
+        GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
+        COMPILER_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -v -Wl,-v CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f6cc2.exe -Wl,--out-implib,libcmTC_f6cc2.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        Using built-in specs.
+        COLLECT_GCC=C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe
+        COLLECT_LTO_WRAPPER=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
+        Target: x86_64-w64-mingw32
+        Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends
+        Thread model: posix
+        Supported LTO compression algorithms: zlib
+        gcc version 13.1.0 (GCC) 
+        COMPILER_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/
+        LIBRARY_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f6cc2.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f6cc2.'
+         C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_f6cc2.exe C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f6cc2.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        collect2 version 13.1.0
+        C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin/ld.exe -m i386pep -Bdynamic -o cmTC_f6cc2.exe C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f6cc2.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        GNU ld (GNU Binutils) 2.40
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f6cc2.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f6cc2.'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:134 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:41 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+          add: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        end of search list found
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/include]
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        collapse include dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+        implicit include dirs: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/include;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:170 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:41 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
+        ignore line: [Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-o3crip']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_f6cc2]
+        ignore line: [[1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe   -v -o CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f6cc2.dir/']
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f6cc2.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -o C:\\Users\\part4\\AppData\\Local\\Temp\\ccqk73pb.s]
+        ignore line: [GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
+        ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++"]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32"]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward"]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include"]
+        ignore line: [ignoring nonexistent directory "/win/include"]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../include"]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/../../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include"]
+        ignore line: [ignoring nonexistent directory "/mingw/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/backward]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../include]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/include-fixed]
+        ignore line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: e75de627edc3c57e31324b930b15b056]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f6cc2.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\part4\\AppData\\Local\\Temp\\ccqk73pb.s]
+        ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
+        ignore line: [COMPILER_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe  -v -Wl -v CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f6cc2.exe -Wl --out-implib libcmTC_f6cc2.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\g++.exe]
+        ignore line: [COLLECT_LTO_WRAPPER=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
+        ignore line: [Target: x86_64-w64-mingw32]
+        ignore line: [Configured with: ../gcc-13.1.0/configure --host=x86_64-w64-mingw32 --target=x86_64-w64-mingw32 --build=x86_64-alpine-linux-musl --prefix=/win --enable-checking=release --enable-fully-dynamic-string --enable-languages=c,c++ --with-arch=nocona --with-tune=generic --enable-libatomic --enable-libgomp --enable-libstdcxx-filesystem-ts --enable-libstdcxx-time --enable-seh-exceptions --enable-shared --enable-static --enable-threads=posix --enable-version-specific-runtime-libs --disable-bootstrap --disable-graphite --disable-libada --disable-libstdcxx-pch --disable-libstdcxx-debug --disable-libquadmath --disable-lto --disable-nls --disable-multilib --disable-rpath --disable-symvers --disable-werror --disable-win32-registry --with-gnu-as --with-gnu-ld --with-system-libiconv --with-system-libz --with-gmp=/win/makedepends --with-mpfr=/win/makedepends --with-mpc=/win/makedepends]
+        ignore line: [Thread model: posix]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 13.1.0 (GCC) ]
+        ignore line: [COMPILER_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/]
+        ignore line: [LIBRARY_PATH=C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
+        ignore line: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f6cc2.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f6cc2.']
+        link line: [ C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_f6cc2.exe C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f6cc2.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe] ==> ignore
+          arg [-m] ==> ignore
+          arg [i386pep] ==> ignore
+          arg [-Bdynamic] ==> search dynamic
+          arg [-o] ==> ignore
+          arg [cmTC_f6cc2.exe] ==> ignore
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o]
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib]
+          arg [-LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..]
+          arg [-v] ==> ignore
+          arg [CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [--out-implib] ==> ignore
+          arg [libcmTC_f6cc2.dll.a] ==> ignore
+          arg [--major-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [--minor-image-version] ==> ignore
+          arg [0] ==> ignore
+          arg [-lstdc++] ==> lib [stdc++]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-lpthread] ==> lib [pthread]
+          arg [-ladvapi32] ==> lib [advapi32]
+          arg [-lshell32] ==> lib [shell32]
+          arg [-luser32] ==> lib [user32]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [-liconv] ==> lib [iconv]
+          arg [-lmingw32] ==> lib [mingw32]
+          arg [-lgcc_s] ==> lib [gcc_s]
+          arg [-lgcc] ==> lib [gcc]
+          arg [-lmoldname] ==> lib [moldname]
+          arg [-lmingwex] ==> lib [mingwex]
+          arg [-lmsvcrt] ==> lib [msvcrt]
+          arg [-lkernel32] ==> lib [kernel32]
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o]
+          arg [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [collect2 version 13.1.0]
+        ignore line: [C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin/ld.exe -m i386pep -Bdynamic -o cmTC_f6cc2.exe C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. -v CMakeFiles/cmTC_f6cc2.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f6cc2.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        linker tool for 'CXX': C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/ld.exe
+        remove lib [msvcrt]
+        remove lib [msvcrt]
+        collapse obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o]
+        collapse obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o]
+        collapse obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o]
+        collapse obj [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib]
+        collapse library dir [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../..] ==> [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit libs: [stdc++;mingw32;gcc_s;gcc;moldname;mingwex;kernel32;pthread;advapi32;shell32;user32;kernel32;iconv;mingw32;gcc_s;gcc;moldname;mingwex;kernel32]
+        implicit objs: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/crt2.o;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib/default-manifest.o;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        implicit dirs: [C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc/x86_64-w64-mingw32/13.1.0;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib/gcc;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/lib;C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/lib]
+        implicit fwks: []
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CMakeDetermineLinkerId.cmake:40 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeDetermineCompilerABI.cmake:207 (cmake_determine_linker_id)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:41 (project)"
+    message: |
+      Running the CXX compiler's linker: "C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/bin/ld.exe" "-v"
+      GNU ld (GNU Binutils) 2.40
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckLibraryExists.cmake:69 (try_compile)"
+      - "CMakeLists.txt:341 (check_library_exists)"
+    checks:
+      - "Looking for cos in m"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-cyu2oh"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-cyu2oh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_LIBM"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-cyu2oh'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_954e5
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   -DCHECK_FUNCTION_EXISTS=cos -o CMakeFiles/cmTC_954e5.dir/CheckFunctionExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-cyu2oh/CheckFunctionExists.c
+        <command-line>: warning: conflicting types for built-in function 'cos'; expected 'double(double)' [-Wbuiltin-declaration-mismatch]
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-cyu2oh/CheckFunctionExists.c:7:3: note: in expansion of macro 'CHECK_FUNCTION_EXISTS'
+            7 |   CHECK_FUNCTION_EXISTS(void);
+              |   ^~~~~~~~~~~~~~~~~~~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-cyu2oh/CheckFunctionExists.c:1:1: note: 'cos' is declared in header '<math.h>'
+          +++ |+#include <math.h>
+            1 | #ifdef CHECK_FUNCTION_EXISTS
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DCHECK_FUNCTION_EXISTS=cos  CMakeFiles/cmTC_954e5.dir/CheckFunctionExists.c.obj -o cmTC_954e5.exe -Wl,--out-implib,libcmTC_954e5.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:350 (check_c_source_compiles)"
+    checks:
+      - "Performing Test C_HAS_inline"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-84jk04"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-84jk04"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "C_HAS_inline"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-84jk04'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_12ff7
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DC_HAS_inline   -o CMakeFiles/cmTC_12ff7.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-84jk04/src.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-84jk04/src.c: In function 'foo':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-84jk04/src.c:2:39: warning: 'return' with a value, in function returning void
+            2 |     static inline void foo() { return 0; }
+              |                                       ^
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-84jk04/src.c:2:24: note: declared here
+            2 |     static inline void foo() { return 0; }
+              |                        ^~~
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_12ff7.dir/src.c.obj -o cmTC_12ff7.exe -Wl,--out-implib,libcmTC_12ff7.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:360 (check_c_source_compiles)"
+    checks:
+      - "Performing Test C_EXTERN_INLINE"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-d1vl91"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-d1vl91"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "C_EXTERN_INLINE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-d1vl91'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_2c7a4
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DC_EXTERN_INLINE   -o CMakeFiles/cmTC_2c7a4.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-d1vl91/src.c
+        FAILED: CMakeFiles/cmTC_2c7a4.dir/src.c.obj 
+        C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DC_EXTERN_INLINE   -o CMakeFiles/cmTC_2c7a4.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-d1vl91/src.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-d1vl91/src.c:4:12: error: redefinition of 'foo'
+            4 |     double foo(double x) { return x + 1.0; }
+              |            ^~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-d1vl91/src.c:3:26: note: previous definition of 'foo' with type 'double(double)'
+            3 |     extern inline double foo(double x) { return x + 1.0; }
+              |                          ^~~
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/Internal/CheckSourceCompiles.cmake:101 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckCSourceCompiles.cmake:52 (cmake_check_source_compiles)"
+      - "CMakeLists.txt:369 (check_c_source_compiles)"
+    checks:
+      - "Performing Test C_C99INLINE"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-t0dg6x"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-t0dg6x"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "C_C99INLINE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-t0dg6x'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_cbf70
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -DC_C99INLINE   -o CMakeFiles/cmTC_cbf70.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-t0dg6x/src.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_cbf70.dir/src.c.obj -o cmTC_cbf70.exe -Wl,--out-implib,libcmTC_cbf70.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file ieeefp.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-tsa723"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-tsa723"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_IEEEFP_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-tsa723'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_1173f
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_1173f.dir/HAVE_IEEEFP_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-tsa723/HAVE_IEEEFP_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_1173f.dir/HAVE_IEEEFP_H.c.obj -o cmTC_1173f.exe -Wl,--out-implib,libcmTC_1173f.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file dlfcn.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-bh1l2f"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-bh1l2f"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DLFCN_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-bh1l2f'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_f17d8
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_f17d8.dir/HAVE_DLFCN_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-bh1l2f/HAVE_DLFCN_H.c
+        FAILED: CMakeFiles/cmTC_f17d8.dir/HAVE_DLFCN_H.c.obj 
+        C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_f17d8.dir/HAVE_DLFCN_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-bh1l2f/HAVE_DLFCN_H.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-bh1l2f/HAVE_DLFCN_H.c:2:10: fatal error: dlfcn.h: No such file or directory
+            2 | #include <dlfcn.h>
+              |          ^~~~~~~~~
+        compilation terminated.
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file inttypes.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6tua87"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6tua87"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_INTTYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6tua87'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_ebcc4
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_ebcc4.dir/HAVE_INTTYPES_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6tua87/HAVE_INTTYPES_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_ebcc4.dir/HAVE_INTTYPES_H.c.obj -o cmTC_ebcc4.exe -Wl,--out-implib,libcmTC_ebcc4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file memory.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-9un7rz"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-9un7rz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_MEMORY_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-9un7rz'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_add8e
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_add8e.dir/HAVE_MEMORY_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-9un7rz/HAVE_MEMORY_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_add8e.dir/HAVE_MEMORY_H.c.obj -o cmTC_add8e.exe -Wl,--out-implib,libcmTC_add8e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file stdint.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-w6vypp"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-w6vypp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-w6vypp'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_7aad3
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_7aad3.dir/HAVE_STDINT_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-w6vypp/HAVE_STDINT_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_7aad3.dir/HAVE_STDINT_H.c.obj -o cmTC_7aad3.exe -Wl,--out-implib,libcmTC_7aad3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file stdlib.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6n9foz"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6n9foz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_STDLIB_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6n9foz'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_8ce89
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_8ce89.dir/HAVE_STDLIB_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6n9foz/HAVE_STDLIB_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_8ce89.dir/HAVE_STDLIB_H.c.obj -o cmTC_8ce89.exe -Wl,--out-implib,libcmTC_8ce89.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file strings.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-846tq4"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-846tq4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_STRINGS_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-846tq4'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_d9c56
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_d9c56.dir/HAVE_STRINGS_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-846tq4/HAVE_STRINGS_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_d9c56.dir/HAVE_STRINGS_H.c.obj -o cmTC_d9c56.exe -Wl,--out-implib,libcmTC_d9c56.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file string.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-mo10a2"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-mo10a2"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_STRING_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-mo10a2'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_b8bd4
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_b8bd4.dir/HAVE_STRING_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-mo10a2/HAVE_STRING_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_b8bd4.dir/HAVE_STRING_H.c.obj -o cmTC_b8bd4.exe -Wl,--out-implib,libcmTC_b8bd4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file sys/stat.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-ts86ye"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-ts86ye"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_SYS_STAT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-ts86ye'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_7e790
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_7e790.dir/HAVE_SYS_STAT_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-ts86ye/HAVE_SYS_STAT_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_7e790.dir/HAVE_SYS_STAT_H.c.obj -o cmTC_7e790.exe -Wl,--out-implib,libcmTC_7e790.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file sys/types.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-a2pqbl"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-a2pqbl"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-a2pqbl'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_336b4
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_336b4.dir/HAVE_SYS_TYPES_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-a2pqbl/HAVE_SYS_TYPES_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_336b4.dir/HAVE_SYS_TYPES_H.c.obj -o cmTC_336b4.exe -Wl,--out-implib,libcmTC_336b4.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:388 (check_include_files)"
+    checks:
+      - "Looking for include file unistd.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-0ut3ak"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-0ut3ak"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_UNISTD_H"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-0ut3ak'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_d5b8c
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_d5b8c.dir/HAVE_UNISTD_H.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-0ut3ak/HAVE_UNISTD_H.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_d5b8c.dir/HAVE_UNISTD_H.c.obj -o cmTC_d5b8c.exe -Wl,--out-implib,libcmTC_d5b8c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckIncludeFiles.cmake:132 (try_compile)"
+      - "CMakeLists.txt:390 (check_include_files)"
+    checks:
+      - "Looking for include file stdio.h"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-0wq744"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-0wq744"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "STDC_HEADERS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-0wq744'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_18f5c
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_18f5c.dir/STDC_HEADERS.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-0wq744/STDC_HEADERS.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_18f5c.dir/STDC_HEADERS.c.obj -o cmTC_18f5c.exe -Wl,--out-implib,libcmTC_18f5c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "CMakeLists.txt:451 (try_run)"
+      - "CMakeLists.txt:462 (check_run_result)"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "COMPILE_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_5378b
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_5378b.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c: In function 'main':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:6: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
+            9 |      exit (status);
+              |      ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:3:1: note: include '<stdlib.h>' or provide a declaration of 'exit'
+            2 |   #include <math.h>
+          +++ |+#include <stdlib.h>
+            3 |   int main (void)
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:6: warning: incompatible implicit declaration of built-in function 'exit' [-Wbuiltin-declaration-mismatch]
+            9 |      exit (status);
+              |      ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:6: note: include '<stdlib.h>' or provide a declaration of 'exit'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_5378b.dir/src.c.obj -o cmTC_5378b.exe -Wl,--out-implib,libcmTC_5378b.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+    runResult:
+      variable: "RUN_RESULT"
+      cached: true
+      stdout: |
+      stderr: |
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "CMakeLists.txt:451 (try_run)"
+      - "CMakeLists.txt:474 (check_run_result)"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "COMPILE_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_57efb
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_57efb.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c: In function 'main':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:10:6: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
+           10 |      exit (status);
+              |      ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:3:1: note: include '<stdlib.h>' or provide a declaration of 'exit'
+            2 |   #include <math.h>
+          +++ |+#include <stdlib.h>
+            3 |   int main (void)
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:10:6: warning: incompatible implicit declaration of built-in function 'exit' [-Wbuiltin-declaration-mismatch]
+           10 |      exit (status);
+              |      ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:10:6: note: include '<stdlib.h>' or provide a declaration of 'exit'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_57efb.dir/src.c.obj -o cmTC_57efb.exe -Wl,--out-implib,libcmTC_57efb.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+    runResult:
+      variable: "RUN_RESULT"
+      cached: true
+      stdout: |
+      stderr: |
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "CMakeLists.txt:451 (try_run)"
+      - "CMakeLists.txt:487 (check_run_result)"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "COMPILE_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_f7b15
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_f7b15.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c
+        FAILED: CMakeFiles/cmTC_f7b15.dir/src.c.obj 
+        C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_f7b15.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c: In function 'main':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:7:20: warning: missing terminating " character
+            7 |     fprintf(stderr,"%Lg
+              |                    ^
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:7:20: error: missing terminating " character
+            7 |     fprintf(stderr,"%Lg
+              |                    ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:8:1: warning: missing terminating " character
+            8 | ",x) ;
+              | ^
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:8:1: error: missing terminating " character
+            8 | ",x) ;
+              | ^~~~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:25: error: expected ')' before ';' token
+            9 |     sscanf(s, "%Lg", &x);
+              |                         ^
+              |                         )
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:7:12: note: to match this '('
+            7 |     fprintf(stderr,"%Lg
+              |            ^
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:5: warning: passing argument 2 of 'fprintf' makes pointer from integer without a cast [-Wint-conversion]
+            9 |     sscanf(s, "%Lg", &x);
+              |     ^~~~~~~~~~~~~~~~~~~~
+              |     |
+              |     int
+        In file included from C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:3:
+        C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdio.h:360:42: note: expected 'const char *' but argument is of type 'int'
+          360 | int fprintf (FILE *__stream, const char *__format, ...)
+              |                              ~~~~~~~~~~~~^~~~~~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:10:51: error: expected ';' before '}' token
+           10 |     if (x == 5678.25) {exit (0);} else {exit(1); }
+              |                                                   ^
+              |                                                   ;
+           11 |   }
+              |   ~                                                
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "RUN_RESULT"
+      cached: true
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:506 (check_symbol_exists)"
+    checks:
+      - "Looking for EXIT_SUCCESS"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-p0d5nc"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-p0d5nc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_EXIT_SUCCESS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-p0d5nc'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_eb516
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_eb516.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-p0d5nc/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_eb516.dir/CheckSymbolExists.c.obj -o cmTC_eb516.exe -Wl,--out-implib,libcmTC_eb516.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:507 (check_symbol_exists)"
+    checks:
+      - "Looking for EXIT_FAILURE"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-1j8cmc"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-1j8cmc"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_EXIT_FAILURE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-1j8cmc'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_e61cb
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_e61cb.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-1j8cmc/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_e61cb.dir/CheckSymbolExists.c.obj -o cmTC_e61cb.exe -Wl,--out-implib,libcmTC_e61cb.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:512 (check_symbol_exists)"
+    checks:
+      - "Looking for feenableexcept"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6itqna"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6itqna"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_FEENABLEEXCEPT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6itqna'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_bc6d0
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -D_GNU_SOURCE=1   -o CMakeFiles/cmTC_bc6d0.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6itqna/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_bc6d0.dir/CheckSymbolExists.c.obj 
+        C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -D_GNU_SOURCE=1   -o CMakeFiles/cmTC_bc6d0.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6itqna/CheckSymbolExists.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6itqna/CheckSymbolExists.c: In function 'main':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6itqna/CheckSymbolExists.c:8:19: error: 'feenableexcept' undeclared (first use in this function); did you mean 'feraiseexcept'?
+            8 |   return ((int*)(&feenableexcept))[argc];
+              |                   ^~~~~~~~~~~~~~
+              |                   feraiseexcept
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-6itqna/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:513 (check_symbol_exists)"
+    checks:
+      - "Looking for fesettrapenable"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-wazkse"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-wazkse"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_FESETTRAPENABLE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-wazkse'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_9414a
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -D_GNU_SOURCE=1   -o CMakeFiles/cmTC_9414a.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-wazkse/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_9414a.dir/CheckSymbolExists.c.obj 
+        C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe -D_GNU_SOURCE=1   -o CMakeFiles/cmTC_9414a.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-wazkse/CheckSymbolExists.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-wazkse/CheckSymbolExists.c: In function 'main':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-wazkse/CheckSymbolExists.c:8:19: error: 'fesettrapenable' undeclared (first use in this function)
+            8 |   return ((int*)(&fesettrapenable))[argc];
+              |                   ^~~~~~~~~~~~~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-wazkse/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:515 (check_symbol_exists)"
+    checks:
+      - "Looking for hypot"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-l2dkm4"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-l2dkm4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_HYPOT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-l2dkm4'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_4232a
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_4232a.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-l2dkm4/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_4232a.dir/CheckSymbolExists.c.obj -o cmTC_4232a.exe -Wl,--out-implib,libcmTC_4232a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:516 (check_symbol_exists)"
+    checks:
+      - "Looking for expm1"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-1cazuf"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-1cazuf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_EXPM1"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-1cazuf'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_3e060
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_3e060.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-1cazuf/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_3e060.dir/CheckSymbolExists.c.obj -o cmTC_3e060.exe -Wl,--out-implib,libcmTC_3e060.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:517 (check_symbol_exists)"
+    checks:
+      - "Looking for acosh"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-mst484"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-mst484"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_ACOSH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-mst484'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_6eda2
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_6eda2.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-mst484/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_6eda2.dir/CheckSymbolExists.c.obj -o cmTC_6eda2.exe -Wl,--out-implib,libcmTC_6eda2.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:518 (check_symbol_exists)"
+    checks:
+      - "Looking for asinh"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-gjq6x3"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-gjq6x3"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_ASINH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-gjq6x3'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_77bac
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_77bac.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-gjq6x3/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_77bac.dir/CheckSymbolExists.c.obj -o cmTC_77bac.exe -Wl,--out-implib,libcmTC_77bac.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:519 (check_symbol_exists)"
+    checks:
+      - "Looking for atanh"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-motf5m"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-motf5m"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_ATANH"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-motf5m'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_c66b9
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_c66b9.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-motf5m/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_c66b9.dir/CheckSymbolExists.c.obj -o cmTC_c66b9.exe -Wl,--out-implib,libcmTC_c66b9.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:520 (check_symbol_exists)"
+    checks:
+      - "Looking for ldexp"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-30db6f"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-30db6f"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_LDEXP"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-30db6f'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_ef7dc
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_ef7dc.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-30db6f/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_ef7dc.dir/CheckSymbolExists.c.obj -o cmTC_ef7dc.exe -Wl,--out-implib,libcmTC_ef7dc.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:521 (check_symbol_exists)"
+    checks:
+      - "Looking for frexp"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-lz7ui4"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-lz7ui4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_FREXP"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-lz7ui4'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_9966a
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_9966a.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-lz7ui4/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_9966a.dir/CheckSymbolExists.c.obj -o cmTC_9966a.exe -Wl,--out-implib,libcmTC_9966a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:522 (check_symbol_exists)"
+    checks:
+      - "Looking for fprnd_t"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-k2wfe0"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-k2wfe0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_FPRND_T"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-k2wfe0'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_6b400
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_6b400.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-k2wfe0/CheckSymbolExists.c
+        FAILED: CMakeFiles/cmTC_6b400.dir/CheckSymbolExists.c.obj 
+        C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_6b400.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-k2wfe0/CheckSymbolExists.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-k2wfe0/CheckSymbolExists.c: In function 'main':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-k2wfe0/CheckSymbolExists.c:8:19: error: 'fprnd_t' undeclared (first use in this function)
+            8 |   return ((int*)(&fprnd_t))[argc];
+              |                   ^~~~~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-k2wfe0/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:523 (check_symbol_exists)"
+    checks:
+      - "Looking for isinf"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-r2raof"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-r2raof"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_ISINF"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-r2raof'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_f3120
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_f3120.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-r2raof/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_f3120.dir/CheckSymbolExists.c.obj -o cmTC_f3120.exe -Wl,--out-implib,libcmTC_f3120.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:524 (check_symbol_exists)"
+    checks:
+      - "Looking for isfinite"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-rjvmn4"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-rjvmn4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_ISFINITE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-rjvmn4'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_9a212
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_9a212.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-rjvmn4/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_9a212.dir/CheckSymbolExists.c.obj -o cmTC_9a212.exe -Wl,--out-implib,libcmTC_9a212.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:528 (check_symbol_exists)"
+    checks:
+      - "Looking for finite"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-fz0rc7"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-fz0rc7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "ieeefp.h"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-fz0rc7'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_1699c
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_1699c.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-fz0rc7/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_1699c.dir/CheckSymbolExists.c.obj -o cmTC_1699c.exe -Wl,--out-implib,libcmTC_1699c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:529 (check_symbol_exists)"
+    checks:
+      - "Looking for isnan"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-4f1sx4"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-4f1sx4"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_ISNAN"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-4f1sx4'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_0d3e2
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_0d3e2.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-4f1sx4/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_0d3e2.dir/CheckSymbolExists.c.obj -o cmTC_0d3e2.exe -Wl,--out-implib,libcmTC_0d3e2.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:535 (check_symbol_exists)"
+    checks:
+      - "Looking for log1p"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-dvjxel"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-dvjxel"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_DECL_LOG1P"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-dvjxel'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_0d866
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_0d866.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-dvjxel/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_0d866.dir/CheckSymbolExists.c.obj -o cmTC_0d866.exe -Wl,--out-implib,libcmTC_0d866.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:543 (check_symbol_exists)"
+    checks:
+      - "Looking for memcpy"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-63i1q8"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-63i1q8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_MEMCPY"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-63i1q8'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_06e88
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_06e88.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-63i1q8/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_06e88.dir/CheckSymbolExists.c.obj -o cmTC_06e88.exe -Wl,--out-implib,libcmTC_06e88.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:544 (check_symbol_exists)"
+    checks:
+      - "Looking for memmove"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-qzppub"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-qzppub"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_MEMMOVE"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-qzppub'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_202db
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_202db.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-qzppub/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_202db.dir/CheckSymbolExists.c.obj -o cmTC_202db.exe -Wl,--out-implib,libcmTC_202db.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:545 (check_symbol_exists)"
+    checks:
+      - "Looking for strdup"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-dc2782"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-dc2782"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_STRDUP"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-dc2782'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_86b4c
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_86b4c.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-dc2782/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_86b4c.dir/CheckSymbolExists.c.obj -o cmTC_86b4c.exe -Wl,--out-implib,libcmTC_86b4c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:546 (check_symbol_exists)"
+    checks:
+      - "Looking for strtol"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-x1fakw"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-x1fakw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_STRTOL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-x1fakw'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_045af
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_045af.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-x1fakw/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_045af.dir/CheckSymbolExists.c.obj -o cmTC_045af.exe -Wl,--out-implib,libcmTC_045af.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:547 (check_symbol_exists)"
+    checks:
+      - "Looking for strtoul"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-endfzw"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-endfzw"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_STRTOUL"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-endfzw'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_8d2ff
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_8d2ff.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-endfzw/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_8d2ff.dir/CheckSymbolExists.c.obj -o cmTC_8d2ff.exe -Wl,--out-implib,libcmTC_8d2ff.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:140 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.29/Modules/CheckSymbolExists.cmake:66 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "CMakeLists.txt:548 (check_symbol_exists)"
+    checks:
+      - "Looking for vprintf"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-vjkk0r"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-vjkk0r"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "HAVE_VPRINTF"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-vjkk0r'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_8e399
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_8e399.dir/CheckSymbolExists.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeScratch/TryCompile-vjkk0r/CheckSymbolExists.c
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_8e399.dir/CheckSymbolExists.c.obj -o cmTC_8e399.exe -Wl,--out-implib,libcmTC_8e399.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+...
+
+---
+events:
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "CMakeLists.txt:451 (try_run)"
+      - "CMakeLists.txt:462 (check_run_result)"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "COMPILE_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_fcad7
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_fcad7.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c: In function 'main':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:6: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
+            9 |      exit (status);
+              |      ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:3:1: note: include '<stdlib.h>' or provide a declaration of 'exit'
+            2 |   #include <math.h>
+          +++ |+#include <stdlib.h>
+            3 |   int main (void)
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:6: warning: incompatible implicit declaration of built-in function 'exit' [-Wbuiltin-declaration-mismatch]
+            9 |      exit (status);
+              |      ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:6: note: include '<stdlib.h>' or provide a declaration of 'exit'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_fcad7.dir/src.c.obj -o cmTC_fcad7.exe -Wl,--out-implib,libcmTC_fcad7.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+    runResult:
+      variable: "RUN_RESULT"
+      cached: true
+      stdout: |
+      stderr: |
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "CMakeLists.txt:451 (try_run)"
+      - "CMakeLists.txt:474 (check_run_result)"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "COMPILE_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_2f3a3
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_2f3a3.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c: In function 'main':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:10:6: warning: implicit declaration of function 'exit' [-Wimplicit-function-declaration]
+           10 |      exit (status);
+              |      ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:3:1: note: include '<stdlib.h>' or provide a declaration of 'exit'
+            2 |   #include <math.h>
+          +++ |+#include <stdlib.h>
+            3 |   int main (void)
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:10:6: warning: incompatible implicit declaration of built-in function 'exit' [-Wbuiltin-declaration-mismatch]
+           10 |      exit (status);
+              |      ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:10:6: note: include '<stdlib.h>' or provide a declaration of 'exit'
+        [2/2] C:\\Windows\\system32\\cmd.exe /C "cd . && C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_2f3a3.dir/src.c.obj -o cmTC_2f3a3.exe -Wl,--out-implib,libcmTC_2f3a3.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        
+      exitCode: 0
+    runResult:
+      variable: "RUN_RESULT"
+      cached: true
+      stdout: |
+      stderr: |
+      exitCode: 0
+  -
+    kind: "try_run-v1"
+    backtrace:
+      - "CMakeLists.txt:451 (try_run)"
+      - "CMakeLists.txt:487 (check_run_result)"
+    directories:
+      source: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+      binary: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake"
+      CMAKE_USER_MAKE_RULES_OVERRIDE: "C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/cmake/c_flag_overrides.cmake"
+    buildResult:
+      variable: "COMPILE_RESULT"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp'
+        
+        Run Build Command(s): C:/Users/part4/AppData/Local/Programs/CLion/bin/ninja/win/x64/ninja -v cmTC_91832
+        [1/2] C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_91832.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c
+        FAILED: CMakeFiles/cmTC_91832.dir/src.c.obj 
+        C:\\Users\\part4\\AppData\\Local\\Programs\\CLion\\bin\\mingw\\bin\\gcc.exe    -o CMakeFiles/cmTC_91832.dir/src.c.obj -c C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c: In function 'main':
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:7:20: warning: missing terminating " character
+            7 |     fprintf(stderr,"%Lg
+              |                    ^
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:7:20: error: missing terminating " character
+            7 |     fprintf(stderr,"%Lg
+              |                    ^~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:8:1: warning: missing terminating " character
+            8 | ",x) ;
+              | ^
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:8:1: error: missing terminating " character
+            8 | ",x) ;
+              | ^~~~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:25: error: expected ')' before ';' token
+            9 |     sscanf(s, "%Lg", &x);
+              |                         ^
+              |                         )
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:7:12: note: to match this '('
+            7 |     fprintf(stderr,"%Lg
+              |            ^
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:9:5: warning: passing argument 2 of 'fprintf' makes pointer from integer without a cast [-Wint-conversion]
+            9 |     sscanf(s, "%Lg", &x);
+              |     ^~~~~~~~~~~~~~~~~~~~
+              |     |
+              |     int
+        In file included from C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:3:
+        C:/Users/part4/AppData/Local/Programs/CLion/bin/mingw/x86_64-w64-mingw32/include/stdio.h:360:42: note: expected 'const char *' but argument is of type 'int'
+          360 | int fprintf (FILE *__stream, const char *__format, ...)
+              |                              ~~~~~~~~~~~~^~~~~~~~
+        C:/Users/part4/Desktop/studia2/KK/KK_L2/libs/GSL/gsl-master/build/CMakeFiles/CMakeTmp/src.c:10:51: error: expected ';' before '}' token
+           10 |     if (x == 5678.25) {exit (0);} else {exit(1); }
+              |                                                   ^
+              |                                                   ;
+           11 |   }
+              |   ~                                                
+        ninja: build stopped: subcommand failed.
+        
+      exitCode: 1
+    runResult:
+      variable: "RUN_RESULT"
+      cached: true
+...

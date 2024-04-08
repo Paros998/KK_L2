@@ -6,3 +6,4 @@ cmake-build-debug
 *.obj
 *.pdb
 result/**
+data/tmp.txt
