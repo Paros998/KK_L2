@@ -11,22 +11,23 @@
 #include "FileService.h"
 
 class App {
-    args::Arguments app_args_;
-    enc::Coder app_coder_;
+	args::Arguments app_args_;
+	enc::Coder app_coder_;
 
-    [[nodiscard]] int extractKey() const;
+	[[nodiscard]] int extractKey() const;
 
 	static std::map<std::string, double> initializeBaseEnMonogramsData();
 
-    void processInput();
+	void processInput();
 
 	void tryToCrackTheEncoding();
+
 public:
-    explicit App(args::Arguments app_args);
+	explicit App(args::Arguments app_args);
 
-    void run();
+	void run();
 
-    ~App() = default;
+	~App() = default;
 
 };
 

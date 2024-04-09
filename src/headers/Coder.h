@@ -10,27 +10,27 @@
 using namespace std;
 
 namespace enc {
-    class Coder {
-        int cesar_key_;
+	class Coder {
+		int cesar_key_;
 
-        [[nodiscard]] char encodeChar(char in) const;
+		[[nodiscard]] char encodeChar(char in) const;
 
 
-        [[nodiscard]] char decodeChar(char in) const;
+		[[nodiscard]] char decodeChar(char in) const;
 
-    public:
-        explicit Coder(const int key) {
-            this->cesar_key_ = key;
-        };
+	public:
+		explicit Coder(const int key) {
+			this->cesar_key_ = key;
+		};
 
-        [[nodiscard]] string encode(const string& in) const;
+		[[nodiscard]] string encode(const string &in) const;
 
-        [[nodiscard]] string decode(const string& in) const;
+		[[nodiscard]] string decode(const string &in) const;
 
-        [[nodiscard]] static string sanitize(const string& in);
+		[[nodiscard]] static string sanitize(const string &in);
 
-        ~Coder() = default;
-    };
+		~Coder() = default;
+	};
 } // enc
 
 #endif //CODER_H

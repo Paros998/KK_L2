@@ -4,10 +4,10 @@
 using namespace std;
 
 int main(int const argc, char const *argv[]) {
-    const auto arguments = args::Arguments(argc, argv);
+	const auto arguments = args::Arguments(argc, argv);
 
-    auto app_runner = App(arguments);
+	auto app_runner = App(arguments);
 
-    app_runner.run();
-    return 0;
+	app_runner.run();
+	return 0;
 }

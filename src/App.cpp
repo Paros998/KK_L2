@@ -112,7 +112,7 @@ void App::tryToCrackTheEncoding() {
 
 				// Ei
 				double expected_count = static_cast<double>(total_found_monograms) * example_probability;
-				expected_count = std::round(expected_count * 1000000) / 1000000;
+				//expected_count = std::round(expected_count * 1000000) / 1000000;
 
 				// X^2 i
 				const auto power = static_cast<double>(std::pow(static_cast<double>(count) - expected_count, 2));
@@ -129,17 +129,22 @@ void App::tryToCrackTheEncoding() {
 			std::cout << "End of iteration for cesar: " << cesar_index_i << endl;
 		} while (chiSquare > criticalValue && cesar_index_i < 26);
 
-		// store the current deciphered result into output
-		of = files::FileService::getOutputHandle(this->app_args_.output_file().c_str());
-		auto coder = Coder(cesar_index_i);
+		if (chiSquare < criticalValue) {
+			std::cout << "The cesar encoding has been broken, and the key was: " << cesar_index_i << endl;
 
-		in.clear();
-		in.seekg(0, std::ios::beg);
+			// store the current deciphered result into output
+			of = files::FileService::getOutputHandle(this->app_args_.output_file().c_str());
+			auto coder = Coder(cesar_index_i);
 
-		while (getline(in, line)) {
-			processed_line = coder.decode(line);
-			of << processed_line << endl;
-		}
+			in.clear();
+			in.seekg(0, std::ios::beg);
+
+			std::cout << "Writing deciphered data to output file." << endl;
+			while (getline(in, line)) {
+				processed_line = coder.decode(line);
+				of << processed_line << endl;
+			}
+		} else std::cout << "Decipher key not found." << endl;
 
 		// close all read/write streams
 		of.close();
@@ -164,7 +169,7 @@ std::map<std::string, double> App::initializeBaseEnMonogramsData() {
 
 	for (const auto &[ngram, count]: counter) {
 		double probability = static_cast<double>(count) / static_cast<double>(total);
-		probability = std::round(probability * 1000000) / 1000000;
+		//probability = std::round(probability * 1000000) / 1000000;
 		probabilityMap.insert({ngram, probability});
 	}
 

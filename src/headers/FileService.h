@@ -9,14 +9,14 @@
 #include "Arguments.h"
 
 namespace files {
-class FileService {
-public:
-    static int readKey(const char* file);
+	class FileService {
+	public:
+		static int readKey(const char *file);
 
-    static std::ifstream getInputHandle(const char* file);
+		static std::ifstream getInputHandle(const char *file);
 
-    static std::ofstream getOutputHandle(const char* file);
-};
+		static std::ofstream getOutputHandle(const char *file);
+	};
 
 } // files
 
