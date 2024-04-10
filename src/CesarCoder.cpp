@@ -2,10 +2,10 @@
 // Created by part4 on 17.03.2024.
 //
 
-#include "headers/Coder.h"
+#include "headers/CesarCoder.h"
 
 namespace enc {
-	char Coder::encodeChar(const char in) const {
+	char CesarCoder::encodeChar(const char in) const {
 		int movedKey = in + this->cesar_key_;
 		if (movedKey <= 90) {
 			return static_cast<char>(movedKey);
@@ -14,7 +14,7 @@ namespace enc {
 		return static_cast<char>(65 + ((movedKey - 90) % 26));
 	}
 
-	char Coder::decodeChar(const char in) const {
+	char CesarCoder::decodeChar(const char in) const {
 		int movedKey = in - this->cesar_key_;
 		if (movedKey >= 65) {
 			return static_cast<char>(movedKey);
@@ -23,7 +23,7 @@ namespace enc {
 		return static_cast<char>(90 - ((65 - movedKey) % 26));
 	}
 
-	string Coder::sanitize(const string &in) {
+	string CesarCoder::sanitize(const string &in) {
 		string sanitized_in;
 
 		for (const auto c: in) {
@@ -40,7 +40,7 @@ namespace enc {
 		return sanitized_in;
 	}
 
-	string Coder::encode(const string &in) const {
+	string CesarCoder::encode(const string &in) const {
 		string out;
 		for (const auto c: in) {
 			const char encoded_char = encodeChar(c);
@@ -49,7 +49,7 @@ namespace enc {
 		return out;
 	}
 
-	string Coder::decode(const string &in) const {
+	string CesarCoder::decode(const string &in) const {
 		string out;
 		for (const auto c: in) {
 			const char decoded_char = decodeChar(c);

@@ -19,13 +19,13 @@ add_executable(KK_L2 src/main.cpp
         src/headers/Arguments.h
         src/headers/FileService.h
         src/headers/NgramsUtil.h
-        src/headers/Coder.h
+        src/headers/CesarCoder.h
         src/headers/App.h
 
         src/Arguments.cpp
         src/FileService.cpp
         src/NgramsUtil.cpp
-        src/Coder.cpp
+        src/CesarCoder.cpp
         src/App.cpp
 )
 

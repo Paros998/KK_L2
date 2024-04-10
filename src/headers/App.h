@@ -7,12 +7,13 @@
 
 
 #include "Arguments.h"
-#include "Coder.h"
+#include "CesarCoder.h"
 #include "FileService.h"
+#include "NgramsUtil.h"
 
 class App {
 	args::Arguments app_args_;
-	enc::Coder app_coder_;
+	enc::CesarCoder app_coder_;
 
 	[[nodiscard]] int extractKey() const;
 
@@ -22,6 +23,11 @@ class App {
 
 	void tryToCrackTheEncoding();
 
+	static double calculateChiSquare(utils::NgramsUtil &util, const map<std::string, double>& probabilityMap);
+
+	void decipherAndWriteFinalResult(int cesar_key, ifstream &in);
+
+	double sanitizeFileAndProcessMonograms();
 public:
 	explicit App(args::Arguments app_args);
 

@@ -10,7 +10,7 @@
 using namespace std;
 
 namespace enc {
-	class Coder {
+	class CesarCoder {
 		int cesar_key_;
 
 		[[nodiscard]] char encodeChar(char in) const;
@@ -19,7 +19,7 @@ namespace enc {
 		[[nodiscard]] char decodeChar(char in) const;
 
 	public:
-		explicit Coder(const int key) {
+		explicit CesarCoder(const int key) {
 			this->cesar_key_ = key;
 		};
 
@@ -29,7 +29,11 @@ namespace enc {
 
 		[[nodiscard]] static string sanitize(const string &in);
 
-		~Coder() = default;
+		void setCesarKey(int cesarKey) {
+			cesar_key_ = cesarKey;
+		}
+
+		~CesarCoder() = default;
 	};
 } // enc
 
