@@ -54,16 +54,19 @@ void App::tryToCrackTheEncoding() {
 		// initializeExampleEnMonograms
 		const auto enMonogramsProbability = initializeBaseEnMonogramsData();
 
+		// sanitize input and process monograms
+		const double totalMonograms = sanitizeFileAndProcessMonograms();
+
+		// calcualate gsl_cdf_chisq_Pinv criticalValue with 0.05 inaccuracy
+		const double criticalValue = gsl_cdf_chisq_Pinv(0.95, totalMonograms);
+
 		// initialize standard vars
 		int cesar_index_i = 0;
-		double chiSquare, criticalValue;
+		double chiSquare;
 		std::string line, processed_line;
-		utils::NgramsUtil util = utils::NgramsUtil();
-		const double totalMonograms = sanitizeFileAndProcessMonograms();
-		auto coder = CesarCoder(cesar_index_i);
 
-		// gsl_cdf_chisq_Pinv criticalValue with 0.05 inaccuracy
-		criticalValue = gsl_cdf_chisq_Pinv(0.95, totalMonograms);
+		utils::NgramsUtil util = utils::NgramsUtil();
+		auto coder = CesarCoder(cesar_index_i);
 
 		// read from sanitized input
 		ifstream in = files::FileService::getInputHandle(this->app_args_.tmpInputFile().c_str());
@@ -81,6 +84,7 @@ void App::tryToCrackTheEncoding() {
 			// decode input
 			while (getline(in, line)) {
 				processed_line = coder.decode(line);
+				// process decoded line
 				util.processLine(processed_line);
 			}
 
@@ -100,12 +104,12 @@ void App::tryToCrackTheEncoding() {
 }
 
 std::map<std::string, double> App::initializeBaseEnMonogramsData() {
-	auto infile = files::FileService::getInputHandle(args::EnMonogramsFile.c_str());
 	auto counter = std::map<std::string, int>();
 	auto probabilityMap = std::map<std::string, double>();
 	std::int64_t total = 0;
 	std::string line;
 
+	auto infile = files::FileService::getInputHandle(args::EnMonogramsFile.c_str());
 	while (getline(infile, line)) {
 		const auto expr = line.substr(0, 1);
 		const int count = std::stoi(line.substr(2));
