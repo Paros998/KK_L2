@@ -16,9 +16,11 @@ namespace args {
 	static const std::string K_FLAG = "-k";
 	static const std::string O_FLAG = "-o";
 	static const std::string A_FLAG = "-a";
+	static const std::string CA_FLAG = "-ca";
+	static const std::string CC_FLAG = "-cc";
 
 	enum flag {
-		d, e, i, k, o, a
+		d, e, i, k, o, a, ca, cc
 	};
 
 	static std::map<std::string, flag> FLAGS = {
@@ -27,7 +29,13 @@ namespace args {
 			{I_FLAG, i},
 			{K_FLAG, k},
 			{O_FLAG, o},
-			{A_FLAG, a}
+			{A_FLAG, a},
+			{CA_FLAG, ca},
+			{CC_FLAG, cc}
+	};
+
+	enum CoderType {
+		NO_CODER, CESAR, AFFINITY
 	};
 
 	enum EncryptMode {
@@ -41,6 +49,7 @@ namespace args {
 	class Arguments {
 		EncryptMode encrypt_mode_ = EncryptMode::NONE;
 		CrackEncMode crack_mode_ = CrackEncMode::NO_CRACK;
+		CoderType coder_type_ = CoderType::NO_CODER;
 		std::string inputFile_;
 		std::string tmpInputFile_ = "../data/tmp.txt";
 		std::string outputFile_;
@@ -73,6 +82,10 @@ namespace args {
 			return tmpInputFile_;
 		}
 
+		[[nodiscard]] CoderType getCoderType() const {
+			return coder_type_;
+		}
+
 		friend std::ostream &operator<<(std::ostream &os, const Arguments &obj) {
 			return os
 					<< "[" << std::endl
@@ -81,6 +94,7 @@ namespace args {
 					<< "outputFile_: " << obj.outputFile_ << std::endl
 					<< "keyFile_: " << obj.keyFile_ << std::endl
 					<< "analize_mode_: " << obj.crack_mode_ << std::endl
+					<< "coder_type_: " << obj.coder_type_ << std::endl
 					<< "]" << std::endl;
 		}
 	};

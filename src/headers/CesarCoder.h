@@ -6,28 +6,27 @@
 #define CODER_H
 
 #include "Libraries.h"
+#include "Coder.h"
 
 using namespace std;
 
 namespace enc {
-	class CesarCoder {
-		int cesar_key_;
+	class CesarCoder : public Coder{
+		int cesar_key_{};
 
-		[[nodiscard]] char encodeChar(char in) const;
+		[[nodiscard]] char encodeChar(char in) const override;
 
+		[[nodiscard]] char decodeChar(char in) const override;
 
-		[[nodiscard]] char decodeChar(char in) const;
-
+		void extractKey();
 	public:
-		explicit CesarCoder(const int key) {
-			this->cesar_key_ = key;
+		explicit CesarCoder(const int cesarKey) {
+			this->cesar_key_ = cesarKey;
 		};
 
-		[[nodiscard]] string encode(const string &in) const;
-
-		[[nodiscard]] string decode(const string &in) const;
-
-		[[nodiscard]] static string sanitize(const string &in);
+		explicit CesarCoder(args::Arguments *args) : Coder(args) {
+			extractKey();
+		};
 
 		void setCesarKey(int cesarKey) {
 			cesar_key_ = cesarKey;

@@ -13,9 +13,7 @@
 
 class App {
 	args::Arguments app_args_;
-	enc::CesarCoder app_coder_;
-
-	[[nodiscard]] int extractKey() const;
+	enc::Coder *app_coder_{};
 
 	static std::map<std::string, double> initializeBaseEnMonogramsData();
 
@@ -33,7 +31,9 @@ public:
 
 	void run();
 
-	~App() = default;
+	~App() {
+		delete this->app_coder_;
+	};
 
 };
 

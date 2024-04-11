@@ -8,6 +8,7 @@ namespace args {
 
 	Arguments::Arguments(int const argc, char const *argv[]) {
 		bool encryptionModeIntitialized = false;
+		bool coderSpecified = false;
 
 		for (int j = 1; j < argc; ++j) {
 			const auto argument = argv[j];
@@ -63,6 +64,16 @@ namespace args {
 							}
 							break;
 						}
+						case ca: {
+							this->coder_type_ = AFFINITY;
+							coderSpecified = true;
+							break;
+						}
+						case cc: {
+							this->coder_type_ = CESAR;
+							coderSpecified = true;
+							break;
+						}
 						default:
 							break;
 					}
@@ -70,9 +81,10 @@ namespace args {
 				}
 			}
 		}
-		if (!encryptionModeIntitialized && this->crack_mode_ == NO_CRACK) {
+		if (!encryptionModeIntitialized && !coderSpecified && this->crack_mode_ == NO_CRACK) {
 			throw std::invalid_argument("Encrypt/Decrypt mode not specified. Check program parameters.");
 		}
 	}
+
 
 } // args

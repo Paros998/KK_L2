@@ -3,6 +3,7 @@
 //
 
 #include "headers/CesarCoder.h"
+#include "headers/FileService.h"
 
 namespace enc {
 	char CesarCoder::encodeChar(const char in) const {
@@ -23,38 +24,7 @@ namespace enc {
 		return static_cast<char>(90 - ((65 - movedKey) % 26));
 	}
 
-	string CesarCoder::sanitize(const string &in) {
-		string sanitized_in;
-
-		for (const auto c: in) {
-			if (c >= 97 && c <= 122) {
-				sanitized_in += static_cast<char>(std::toupper(c));
-				continue;
-			}
-
-			if (c >= 65 && c <= 90) {
-				sanitized_in += c;
-			}
-		}
-
-		return sanitized_in;
-	}
-
-	string CesarCoder::encode(const string &in) const {
-		string out;
-		for (const auto c: in) {
-			const char encoded_char = encodeChar(c);
-			out += encoded_char;
-		}
-		return out;
-	}
-
-	string CesarCoder::decode(const string &in) const {
-		string out;
-		for (const auto c: in) {
-			const char decoded_char = decodeChar(c);
-			out += decoded_char;
-		}
-		return out;
+	void CesarCoder::extractKey() {
+		this->cesar_key_ = files::FileService::readKey(this->args_->key_file().c_str());
 	}
 } // enc

@@ -5,16 +5,24 @@
 #include "headers/App.h"
 #include "headers/FileService.h"
 #include "headers/NgramsUtil.h"
+#include "headers/AffineCoder.h"
 
 using namespace enc;
 using namespace files;
 
-int App::extractKey() const {
-	return FileService::readKey(this->app_args_.key_file().c_str());
-}
-
-App::App(args::Arguments app_args) : app_args_(std::move(app_args)), app_coder_(CesarCoder(extractKey())) {
+App::App(args::Arguments app_args) : app_args_(std::move(app_args)) {
 	std::cout << this->app_args_ << endl;
+
+	switch(this->app_args_.getCoderType()) {
+		case args::NO_CODER:
+			break;
+		case args::CESAR:
+			this->app_coder_ = new CesarCoder(&this->app_args_);
+			break;
+		case args::AFFINITY:
+			this->app_coder_ = new AffineCoder(&this->app_args_);
+			break;
+	}
 }
 
 void App::processInput() {
@@ -28,10 +36,10 @@ void App::processInput() {
 	string line, processed_line;
 	while (getline(if_stream, line)) {
 		if (this->app_args_.encrypt_mode() == args::ENCRYPT) {
-			const string sanitized_in = CesarCoder::sanitize(line);
-			processed_line = this->app_coder_.encode(sanitized_in);
+			const string sanitized_in = Coder::sanitize(line);
+			processed_line = this->app_coder_->encode(sanitized_in);
 		} else {
-			processed_line = this->app_coder_.decode(line);
+			processed_line = this->app_coder_->decode(line);
 		}
 		of_stream << processed_line << endl;
 	}
@@ -57,7 +65,7 @@ void App::tryToCrackTheEncoding() {
 		// sanitize input and process monograms
 		const double totalMonograms = sanitizeFileAndProcessMonograms();
 
-		// calcualate gsl_cdf_chisq_Pinv criticalValue with 0.05 inaccuracy
+		// calculate gsl_cdf_chisq_Pinv criticalValue with 0.05 inaccuracy
 		const double criticalValue = gsl_cdf_chisq_Pinv(0.95, totalMonograms);
 
 		// initialize standard vars
@@ -186,7 +194,7 @@ double App::sanitizeFileAndProcessMonograms() {
 
 	// sanitize testable input file
 	while (getline(in, line)) {
-		const std::string sanitized_in = enc::CesarCoder::sanitize(line);
+		const std::string sanitized_in = Coder::sanitize(line);
 
 		// process sanitized line
 		util.processLine(sanitized_in);
