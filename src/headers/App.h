@@ -23,7 +23,7 @@ class App {
 
 	static double calculateChiSquare(utils::NgramsUtil &util, const map<std::string, double>& probabilityMap);
 
-	void decipherAndWriteFinalResult(int cesar_key, ifstream &in);
+	void decipherAndWriteFinalResult(enc::Coder &coder, ifstream &in);
 
 	double sanitizeFileAndProcessMonograms();
 public:

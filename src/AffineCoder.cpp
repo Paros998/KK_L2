@@ -27,12 +27,42 @@ namespace enc {
 				const auto original_key = line.substr(0, 1);
 				const auto replacement = line.substr(2, 1);
 				this->keys_map_.insert({
-					static_cast<char>(std::toupper(original_key[0])),
-					static_cast<char>(std::toupper(replacement[0]))
-				});
+						                       static_cast<char>(std::toupper(original_key[0])),
+						                       static_cast<char>(std::toupper(replacement[0]))
+				                       });
 			}
 		}
 		infile.close();
 	}
 
-} // enc
+	int AffineCoder::randomInRange(int min, int max) {
+		std::random_device rd;
+		std::mt19937 eng(rd()); // Seed the generator
+		std::uniform_int_distribution<> distribution(min, max); // Define the range
+
+		return distribution(eng); // Generate the random number
+	}
+
+	void AffineCoder::setIteration(int i) {
+		char randomSign;
+
+		// randomize and set keys map
+		auto keysMap = std::map<char, char>();
+		vector<char> lettersUsed;
+
+		for (const auto c: this->letters) {
+			int pos;
+			randomSign = -1;
+			do {
+				randomSign = randomInRange(65, 90);
+			} while (randomSign == c && std::binary_search(lettersUsed.begin(), lettersUsed.end(), randomSign));
+
+			keysMap.insert({c, randomSign});
+			lettersUsed.push_back(randomSign);
+			std::sort(lettersUsed.begin(), lettersUsed.end());
+		}
+
+		this->setKeysMap(keysMap);
+	}
+
+	} // enc

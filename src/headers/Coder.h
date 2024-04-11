@@ -23,7 +23,6 @@ namespace enc {
 	protected:
 		args::Arguments *args_{};
 
-
 	public:
 		Coder() = default;
 
@@ -34,6 +33,10 @@ namespace enc {
 		string decode(const string &in);
 
 		string encode(const string &in);
+
+		virtual void setIteration(int i) = 0;
+
+		~Coder() = default;
 	};
 
 }

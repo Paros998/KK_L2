@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="bruteForce Cesar light" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-a bf -cc -i ../data/in_encrypted_light.txt -o ../result/out_decrypted_brute_force_light.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KK_L2" TARGET_NAME="KK_L2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KK_L2" RUN_TARGET_NAME="KK_L2">
+  <configuration default="false" name="bruteForce Cesar light" type="CMakeRunConfiguration" factoryName="Application" folderName="cesar" PROGRAM_PARAMS="-a bf -cc -i ../data/in_encrypted_light.txt -o ../result/out_decrypted_brute_force_light.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="KK_L2" TARGET_NAME="KK_L2" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="KK_L2" RUN_TARGET_NAME="KK_L2">
     <method v="2">
       <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
     </method>

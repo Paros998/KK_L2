@@ -9,9 +9,9 @@
 #include "Coder.h"
 
 namespace enc {
-
 	class AffineCoder : public Coder {
-		map<char, char> keys_map_;
+		vector<char> letters;
+		map<char, char> keys_map_{};
 
 		[[nodiscard]] char encodeChar(char in) const override;
 
@@ -19,18 +19,28 @@ namespace enc {
 
 		void readKeys();
 
-	public:
-		explicit AffineCoder(const map<char, char> &keysMap) {
+		void setKeysMap(const map<char, char> &keysMap) {
 			this->keys_map_ = keysMap;
 		}
+
+		int randomInRange(int min, int max);
+
+	public:
+		explicit AffineCoder() {
+			for (int i = 65; i <= 90; i++) {
+				letters.push_back(static_cast<char>(i));
+			}
+		};
 
 		explicit AffineCoder(args::Arguments *args) : Coder(args) {
 			readKeys();
 		};
 
-		void setKeysMap(const map<char, char> &keysMap) {
-			this->keys_map_ = keysMap;
+		[[nodiscard]] const map<char, char> &getKeysMap() const {
+			return keys_map_;
 		}
+
+		void setIteration(int i) override;
 
 		~AffineCoder() = default;
 	};

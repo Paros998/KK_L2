@@ -16,6 +16,9 @@
 #include <cstdint>
 
 #include <cmath>
+#include <vector>
+#include <random>
+#include <algorithm>
 
 #include "gsl/gsl_cdf.h"
 

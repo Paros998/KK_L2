@@ -39,7 +39,7 @@ namespace args {
 	};
 
 	enum EncryptMode {
-		ENCRYPT, DECRYPT, NONE
+		NONE, ENCRYPT, DECRYPT
 	};
 
 	enum CrackEncMode {

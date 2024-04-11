@@ -19,17 +19,19 @@ namespace enc {
 		[[nodiscard]] char decodeChar(char in) const override;
 
 		void extractKey();
+
+		void setCesarKey(int cesarKey) {
+			cesar_key_ = cesarKey;
+		}
 	public:
-		explicit CesarCoder(const int cesarKey) {
-			this->cesar_key_ = cesarKey;
-		};
+		explicit CesarCoder() = default;
 
 		explicit CesarCoder(args::Arguments *args) : Coder(args) {
 			extractKey();
 		};
 
-		void setCesarKey(int cesarKey) {
-			cesar_key_ = cesarKey;
+		void setIteration(int i) override {
+			setCesarKey(i);
 		}
 
 		~CesarCoder() = default;

@@ -12,8 +12,14 @@ using namespace files;
 
 App::App(args::Arguments app_args) : app_args_(std::move(app_args)) {
 	std::cout << this->app_args_ << endl;
+}
 
-	switch(this->app_args_.getCoderType()) {
+void App::processInput() {
+	if (this->app_args_.encrypt_mode() == args::NONE) {
+		return;
+	}
+
+	switch (this->app_args_.getCoderType()) {
 		case args::NO_CODER:
 			break;
 		case args::CESAR:
@@ -22,12 +28,6 @@ App::App(args::Arguments app_args) : app_args_(std::move(app_args)) {
 		case args::AFFINITY:
 			this->app_coder_ = new AffineCoder(&this->app_args_);
 			break;
-	}
-}
-
-void App::processInput() {
-	if (this->app_args_.encrypt_mode() == args::NONE) {
-		return;
 	}
 
 	auto if_stream = FileService::getInputHandle(this->app_args_.input_file().c_str());
@@ -53,12 +53,13 @@ void App::run() {
 	tryToCrackTheEncoding();
 
 	if (this->app_args_.encrypt_mode() != args::NONE) {
-		std::cout << (this->app_args_.encrypt_mode() == 0 ? "Encryption completed." : "Decryption completed");
+		std::cout << (this->app_args_.encrypt_mode() == args::ENCRYPT ? "Encryption completed." : "Decryption completed");
 	}
 }
 
 void App::tryToCrackTheEncoding() {
-	if (this->app_args_.encrypt_mode() == args::NONE && this->app_args_.getCrackEncMode() == args::BRUTE_FORCE) {
+	if (this->app_args_.encrypt_mode() == args::NONE && this->app_args_.getCrackEncMode() == args::BRUTE_FORCE
+	    && this->app_args_.getCoderType() != args::NO_CODER) {
 		// initializeExampleEnMonograms
 		const auto enMonogramsProbability = initializeBaseEnMonogramsData();
 
@@ -69,12 +70,16 @@ void App::tryToCrackTheEncoding() {
 		const double criticalValue = gsl_cdf_chisq_Pinv(0.95, totalMonograms);
 
 		// initialize standard vars
-		int cesar_index_i = 0;
+		int iteration = 0;
 		double chiSquare;
 		std::string line, processed_line;
-
 		utils::NgramsUtil util = utils::NgramsUtil();
-		auto coder = CesarCoder(cesar_index_i);
+
+		if (this->app_args_.getCoderType() == args::CESAR) {
+			this->app_coder_ = new CesarCoder();
+		} else {
+			this->app_coder_ = new AffineCoder();
+		}
 
 		// read from sanitized input
 		ifstream in = files::FileService::getInputHandle(this->app_args_.tmpInputFile().c_str());
@@ -83,15 +88,15 @@ void App::tryToCrackTheEncoding() {
 			// update loop, reset util and ifstream pos
 			in.clear();
 			in.seekg(0, std::ios::beg);
-			cesar_index_i++;
+			iteration++;
 			util.reset();
 
 			// initialize new cesar key
-			coder.setCesarKey(cesar_index_i);
+			app_coder_->setIteration(iteration);
 
 			// decode input
 			while (getline(in, line)) {
-				processed_line = coder.decode(line);
+				processed_line = app_coder_->decode(line);
 				// process decoded line
 				util.processLine(processed_line);
 			}
@@ -99,13 +104,23 @@ void App::tryToCrackTheEncoding() {
 			/* test x^2 */
 			chiSquare = calculateChiSquare(util, enMonogramsProbability);
 
-			std::cout << "End of iteration for cesar: " << cesar_index_i << endl;
-		} while (chiSquare > criticalValue && cesar_index_i < 26);
+			std::cout << "End of iteration: " << iteration << ", and the critical val is:"<< criticalValue << ", current chiSquare is:" << chiSquare << endl;
+		} while (chiSquare > criticalValue && (this->app_args_.getCoderType() == args::AFFINITY || iteration < 26));
 
 		if (chiSquare < criticalValue) {
-			decipherAndWriteFinalResult(cesar_index_i, in);
-		} else std::cout << "Decipher key not found." << endl;
+			if (this->app_args_.getCoderType() == args::CESAR) {
+				std::cout << "The cesar encoding has been broken, and the key was: " << iteration << endl;
+			} else {
+				std::cout << "The affine encoding has been broken, and the keys were: " << endl;
+				for (const auto &[k, v]: dynamic_cast<AffineCoder*>(this->app_coder_)->getKeysMap()) {
+					std::cout << "Key:" << k << " -> Val:" << v << endl;
+				}
+			}
 
+			decipherAndWriteFinalResult(*app_coder_, in);
+		} else {
+			std::cout << "Decipher key not found." << endl;
+		}
 		// close all read/write streams
 		in.close();
 	}
@@ -135,11 +150,11 @@ std::map<std::string, double> App::initializeBaseEnMonogramsData() {
 	return probabilityMap;
 }
 
-double App::calculateChiSquare(utils::NgramsUtil &util, const map<std::string, double>& probabilityMap) {
+double App::calculateChiSquare(utils::NgramsUtil &util, const map<std::string, double> &probabilityMap) {
 	// N
 	double chi = 0.0;
 	const auto total_found_monograms = util.getTotal();
-	const auto& tested_text_monograms_counter = util.getCounter();
+	const auto &tested_text_monograms_counter = util.getCounter();
 
 	for (const auto &[ngram, /** Ci */ count]: tested_text_monograms_counter) {
 		// Pi
@@ -164,14 +179,11 @@ double App::calculateChiSquare(utils::NgramsUtil &util, const map<std::string, d
 	return chi;
 }
 
-void App::decipherAndWriteFinalResult(int cesar_key, ifstream &in) {
+void App::decipherAndWriteFinalResult(enc::Coder &coder, ifstream &in) {
 	std::string line, processed_line;
-
-	std::cout << "The cesar encoding has been broken, and the key was: " << cesar_key << endl;
 
 	// store the current deciphered result into output
 	std::ofstream of = files::FileService::getOutputHandle(this->app_args_.output_file().c_str());
-	auto coder = CesarCoder(cesar_key);
 
 	in.clear();
 	in.seekg(0, std::ios::beg);
