@@ -21,6 +21,7 @@ add_executable(KK_L2 src/main.cpp
         src/headers/NgramsUtil.h
         src/headers/Coder.h
         src/headers/CesarCoder.h
+        src/headers/AffineCoder.h
         src/headers/App.h
 
         src/Arguments.cpp
@@ -30,7 +31,6 @@ add_executable(KK_L2 src/main.cpp
         src/CesarCoder.cpp
         src/App.cpp
         src/AffineCoder.cpp
-        src/AffineCoder.h
 )
 
 target_link_libraries(KK_L2 ${GSL_LIBRARIES})
