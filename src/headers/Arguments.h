@@ -8,7 +8,10 @@
 #include "Libraries.h"
 
 namespace args {
-	static const std::string EnMonogramsFile = "../data/english_monograms.txt";
+	static const std::string EnMonogramsFile = "../data/grams/english_monograms.txt";
+	static const std::string EnBigramsFile = "../data/grams/english_bigrams.txt";
+	static const std::string EnTrigramsFile = "../data/grams/english_trigrams.txt";
+	static const std::string EnQuadgramsFile = "../data/grams/english_quadgrams.txt";
 
 	static const std::string D_FLAG = "-d";
 	static const std::string E_FLAG = "-e";
@@ -18,9 +21,13 @@ namespace args {
 	static const std::string A_FLAG = "-a";
 	static const std::string CA_FLAG = "-ca";
 	static const std::string CC_FLAG = "-cc";
+	static const std::string N1_FLAG = "-n1";
+	static const std::string N2_FLAG = "-n2";
+	static const std::string N3_FLAG = "-n3";
+	static const std::string N4_FLAG = "-n4";
 
 	enum flag {
-		d, e, i, k, o, a, ca, cc
+		d, e, i, k, o, a, ca, cc, n1, n2, n3, n4
 	};
 
 	static std::map<std::string, flag> FLAGS = {
@@ -31,7 +38,11 @@ namespace args {
 			{O_FLAG, o},
 			{A_FLAG, a},
 			{CA_FLAG, ca},
-			{CC_FLAG, cc}
+			{CC_FLAG, cc},
+			{N1_FLAG, n1},
+			{N2_FLAG, n2},
+			{N3_FLAG, n3},
+			{N4_FLAG, n4}
 	};
 
 	enum CoderType {
@@ -50,6 +61,8 @@ namespace args {
 		EncryptMode encrypt_mode_ = EncryptMode::NONE;
 		CrackEncMode crack_mode_ = CrackEncMode::NO_CRACK;
 		CoderType coder_type_ = CoderType::NO_CODER;
+		int brute_force_ngrams_mode = -1;
+		std::string brute_force_ngrams_file;
 		std::string inputFile_;
 		std::string tmpInputFile_ = "../data/tmp.txt";
 		std::string outputFile_;
@@ -84,6 +97,14 @@ namespace args {
 
 		[[nodiscard]] CoderType getCoderType() const {
 			return coder_type_;
+		}
+
+		[[nodiscard]] int getBruteForceNgramsMode() const {
+			return brute_force_ngrams_mode;
+		}
+
+		[[nodiscard]] const std::string &getBruteForceNgramsFile() const {
+			return brute_force_ngrams_file;
 		}
 
 		friend std::ostream &operator<<(std::ostream &os, const Arguments &obj) {

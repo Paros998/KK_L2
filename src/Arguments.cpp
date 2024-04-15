@@ -74,6 +74,26 @@ namespace args {
 							coderSpecified = true;
 							break;
 						}
+						case n1: {
+							this->brute_force_ngrams_mode = 1;
+							this->brute_force_ngrams_file = EnMonogramsFile;
+							break;
+						}
+						case n2: {
+							this->brute_force_ngrams_mode = 2;
+							this->brute_force_ngrams_file = EnBigramsFile;
+							break;
+						}
+						case n3: {
+							this->brute_force_ngrams_mode = 3;
+							this->brute_force_ngrams_file = EnTrigramsFile;
+							break;
+						}
+						case n4: {
+							this->brute_force_ngrams_mode = 4;
+							this->brute_force_ngrams_file = EnQuadgramsFile;
+							break;
+						}
 						default:
 							break;
 					}

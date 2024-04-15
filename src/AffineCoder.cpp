@@ -43,23 +43,30 @@ namespace enc {
 		return distribution(eng); // Generate the random number
 	}
 
-	void AffineCoder::setIteration(int i) {
+	std::size_t AffineCoder::calculateMapHash(map<char, char> mapToHash) {
+		int combinedHash = 0;
+
+
+		return combinedHash;
+	}
+
+	void AffineCoder::setKeyForIteration(int i) {
 		char randomSign;
+		std::map<char, char> keysMap;
 
 		// randomize and set keys map
-		auto keysMap = std::map<char, char>();
+		keysMap = std::map<char, char>();
 		vector<char> lettersUsed;
 
 		for (const auto c: this->letters) {
-			int pos;
 			randomSign = -1;
 			do {
 				randomSign = randomInRange(65, 90);
-			} while (randomSign == c && std::binary_search(lettersUsed.begin(), lettersUsed.end(), randomSign));
+				// FIXME more than 1 letter used as values
+			} while (std::binary_search(lettersUsed.begin(), lettersUsed.end(), randomSign));
 
 			keysMap.insert({c, randomSign});
 			lettersUsed.push_back(randomSign);
-			std::sort(lettersUsed.begin(), lettersUsed.end());
 		}
 
 		this->setKeysMap(keysMap);

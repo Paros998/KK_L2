@@ -25,6 +25,7 @@ namespace enc {
 
 		int randomInRange(int min, int max);
 
+		size_t calculateMapHash(map<char, char> mapToHash);
 	public:
 		explicit AffineCoder() {
 			for (int i = 65; i <= 90; i++) {
@@ -40,9 +41,10 @@ namespace enc {
 			return keys_map_;
 		}
 
-		void setIteration(int i) override;
+		void setKeyForIteration(int i) override;
 
 		~AffineCoder() = default;
+
 	};
 
 } // enc

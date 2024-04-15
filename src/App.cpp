@@ -60,8 +60,8 @@ void App::run() {
 void App::tryToCrackTheEncoding() {
 	if (this->app_args_.encrypt_mode() == args::NONE && this->app_args_.getCrackEncMode() == args::BRUTE_FORCE
 	    && this->app_args_.getCoderType() != args::NO_CODER) {
-		// initializeExampleEnMonograms
-		const auto enMonogramsProbability = initializeBaseEnMonogramsData();
+		// initializeExampleEnGramsProbability
+		const auto enGramsProbability = initializeBaseEnGramsData();
 
 		// sanitize input and process monograms
 		const double totalMonograms = sanitizeFileAndProcessMonograms();
@@ -73,7 +73,7 @@ void App::tryToCrackTheEncoding() {
 		int iteration = 0;
 		double chiSquare;
 		std::string line, processed_line;
-		utils::NgramsUtil util = utils::NgramsUtil();
+		utils::NgramsUtil util = utils::NgramsUtil(this->app_args_.getBruteForceNgramsMode());
 
 		if (this->app_args_.getCoderType() == args::CESAR) {
 			this->app_coder_ = new CesarCoder();
@@ -83,7 +83,7 @@ void App::tryToCrackTheEncoding() {
 
 		// read from sanitized input
 		ifstream in = files::FileService::getInputHandle(this->app_args_.tmpInputFile().c_str());
-
+		std::cout.precision(__DBL_NORM_MAX__); // Set precision to maximum
 		do {
 			// update loop, reset util and ifstream pos
 			in.clear();
@@ -92,7 +92,7 @@ void App::tryToCrackTheEncoding() {
 			util.reset();
 
 			// initialize new cesar key
-			app_coder_->setIteration(iteration);
+			app_coder_->setKeyForIteration(iteration);
 
 			// decode input
 			while (getline(in, line)) {
@@ -102,7 +102,7 @@ void App::tryToCrackTheEncoding() {
 			}
 
 			/* test x^2 */
-			chiSquare = calculateChiSquare(util, enMonogramsProbability);
+			chiSquare = calculateChiSquare(util, enGramsProbability);
 
 			std::cout << "End of iteration: " << iteration << ", and the critical val is:"<< criticalValue << ", current chiSquare is:" << chiSquare << endl;
 		} while (chiSquare > criticalValue && (this->app_args_.getCoderType() == args::AFFINITY || iteration < 26));
@@ -126,24 +126,29 @@ void App::tryToCrackTheEncoding() {
 	}
 }
 
-std::map<std::string, double> App::initializeBaseEnMonogramsData() {
+std::map<std::string, double> App::initializeBaseEnGramsData() {
 	auto counter = std::map<std::string, int>();
 	auto probabilityMap = std::map<std::string, double>();
 	std::int64_t total = 0;
 	std::string line;
 
-	auto infile = files::FileService::getInputHandle(args::EnMonogramsFile.c_str());
+	const char *grams_file = this->app_args_.getBruteForceNgramsFile().c_str();
+	int n_grams_mode = this->app_args_.getBruteForceNgramsMode();
+	auto infile = files::FileService::getInputHandle(grams_file);
+
 	while (getline(infile, line)) {
-		const auto expr = line.substr(0, 1);
-		const int count = std::stoi(line.substr(2));
-		counter.insert({expr, count});
-		total += count;
+		if (line.size() >= n_grams_mode + 2) {
+			const auto expr = line.substr(0, n_grams_mode);
+			const int count = std::stoi(line.substr(n_grams_mode + 1));
+			counter.insert({expr, count});
+			total += count;
+		}
 	}
 	infile.close();
 
 	for (const auto &[ngram, count]: counter) {
 		double probability = static_cast<double>(count) / static_cast<double>(total);
-		//probability = std::round(probability * 1000000) / 1000000;
+		probability = std::round(probability * 1000000000.0) / 1000000000.0;
 		probabilityMap.insert({ngram, probability});
 	}
 
@@ -153,19 +158,19 @@ std::map<std::string, double> App::initializeBaseEnMonogramsData() {
 double App::calculateChiSquare(utils::NgramsUtil &util, const map<std::string, double> &probabilityMap) {
 	// N
 	double chi = 0.0;
-	const auto total_found_monograms = util.getTotal();
-	const auto &tested_text_monograms_counter = util.getCounter();
+	const auto totalGrams = util.getTotal();
+	const auto &tested_text_grams_counter = util.getCounter();
 
-	for (const auto &[ngram, /** Ci */ count]: tested_text_monograms_counter) {
+	for (const auto &[ngram, /** Ci */ count]: tested_text_grams_counter) {
 		// Pi
 		double example_probability = probabilityMap.find(ngram)->second;
 
 		// Ei
-		double expected_count = static_cast<double>(total_found_monograms) * example_probability;
-		//expected_count = std::round(expected_count * 1000000) / 1000000;
+		double expected_count = static_cast<double>(totalGrams) * example_probability;
+		expected_count = std::round(expected_count * 1000000000.0) / 1000000000.0;
 
 		// X^2 i
-		const auto power = static_cast<double>(std::pow(static_cast<double>(count) - expected_count, 2));
+			const auto power = static_cast<double>(std::pow(static_cast<double>(count) - expected_count, 2));
 
 		const double x_2 = expected_count == 0 ? 0.0 : power / expected_count;
 
@@ -199,7 +204,7 @@ void App::decipherAndWriteFinalResult(enc::Coder &coder, ifstream &in) {
 
 double App::sanitizeFileAndProcessMonograms() {
 	std::string line;
-	utils::NgramsUtil util = utils::NgramsUtil();
+	utils::NgramsUtil util = utils::NgramsUtil(this->app_args_.getBruteForceNgramsMode());
 
 	ifstream in = files::FileService::getInputHandle(this->app_args_.input_file().c_str());
 	ofstream of = files::FileService::getOutputHandle(this->app_args_.tmpInputFile().c_str());

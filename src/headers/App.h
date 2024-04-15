@@ -15,7 +15,7 @@ class App {
 	args::Arguments app_args_;
 	enc::Coder *app_coder_{};
 
-	static std::map<std::string, double> initializeBaseEnMonogramsData();
+	std::map<std::string, double> initializeBaseEnGramsData();
 
 	void processInput();
 

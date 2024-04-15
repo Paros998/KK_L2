@@ -14,8 +14,8 @@ namespace utils {
 		std::int64_t total_ = 0;
 		int mode_;
 	public:
-		explicit NgramsUtil() {
-			this->mode_ = 1;
+		explicit NgramsUtil(const int mode) {
+			this->mode_ = mode;
 			this->counter_ = std::map<const std::string, int>();
 		};
 
