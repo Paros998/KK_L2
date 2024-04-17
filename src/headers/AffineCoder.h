@@ -9,7 +9,26 @@
 #include "Coder.h"
 
 namespace enc {
+	struct pair_hash {
+		template<class T1, class T2>
+		std::size_t operator () (const std::pair<T1,T2> &pair) const {
+			auto hash1 = my_hash<T1>{}(pair.first);
+			auto hash2 = std::hash<T2>{}(pair.second);
+			return hash1 ^ (hash2 + 0x9e3779b9 + (hash1 << 6) + (hash1 >> 2)); // Improved combining hash function
+		}
+
+	private:
+		// Custom hash function for const char keys
+		template<typename T>
+		struct my_hash {
+			std::size_t operator () (T key) const {
+				return static_cast<std::size_t>(key);
+			}
+		};
+	};
+
 	class AffineCoder : public Coder {
+		vector<std::size_t> used_key_map_hashes_;
 		vector<char> letters;
 		map<char, char> keys_map_{};
 
@@ -25,7 +44,10 @@ namespace enc {
 
 		int randomInRange(int min, int max);
 
-		size_t calculateMapHash(map<char, char> mapToHash);
+		size_t calculateMapHash(map<char, char> &mapToHash);
+
+		map<char, char> &randomizeKeyMap(map<char, char> &keysMap);
+
 	public:
 		explicit AffineCoder() {
 			for (int i = 65; i <= 90; i++) {

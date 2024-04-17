@@ -20,6 +20,8 @@
 #include <random>
 #include <algorithm>
 
+#include <boost/functional.hpp>
+
 #include "gsl/gsl_cdf.h"
 
 #ifndef LIBRARIES_H

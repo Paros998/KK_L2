@@ -45,84 +45,91 @@ void App::processInput() {
 	}
 	of_stream.close();
 	if_stream.close();
-}
-
-void App::run() {
-	processInput();
-
-	tryToCrackTheEncoding();
 
 	if (this->app_args_.encrypt_mode() != args::NONE) {
 		std::cout << (this->app_args_.encrypt_mode() == args::ENCRYPT ? "Encryption completed." : "Decryption completed");
 	}
 }
 
+void App::run() {
+	processInput();
+
+	tryToCrackTheEncoding();
+}
+
 void App::tryToCrackTheEncoding() {
-	if (this->app_args_.encrypt_mode() == args::NONE && this->app_args_.getCrackEncMode() == args::BRUTE_FORCE
-	    && this->app_args_.getCoderType() != args::NO_CODER) {
-		// initializeExampleEnGramsProbability
-		const auto enGramsProbability = initializeBaseEnGramsData();
+	if (this->app_args_.encrypt_mode() != args::NONE && this->app_args_.getCrackEncMode() != args::BRUTE_FORCE
+	    && this->app_args_.getCoderType() == args::NO_CODER) {
+		return;
+	}
 
-		// sanitize input and process monograms
-		const double totalMonograms = sanitizeFileAndProcessMonograms();
+	// initializeExampleEnGramsProbability
+	const auto enGramsProbability = initializeBaseEnGramsData();
 
-		// calculate gsl_cdf_chisq_Pinv criticalValue with 0.05 inaccuracy
-		const double criticalValue = gsl_cdf_chisq_Pinv(0.95, totalMonograms);
+	// sanitize input and process monograms
+	const double totalMonograms = sanitizeFileAndProcessMonograms();
 
-		// initialize standard vars
-		int iteration = 0;
-		double chiSquare;
-		std::string line, processed_line;
-		utils::NgramsUtil util = utils::NgramsUtil(this->app_args_.getBruteForceNgramsMode());
+	// calculate gsl_cdf_chisq_Pinv criticalValue with 0.05 inaccuracy
+	const double criticalValue = gsl_cdf_chisq_Pinv(0.95, totalMonograms);
 
-		if (this->app_args_.getCoderType() == args::CESAR) {
-			this->app_coder_ = new CesarCoder();
-		} else {
-			this->app_coder_ = new AffineCoder();
+	// initialize standard vars
+	int iteration = 0;
+	double chiSquare;
+	std::string line, processed_line;
+	utils::NgramsUtil util = utils::NgramsUtil(this->app_args_.getBruteForceNgramsMode());
+
+	if (this->app_args_.getCoderType() == args::CESAR) {
+		this->app_coder_ = new CesarCoder();
+	} else {
+		this->app_coder_ = new AffineCoder();
+	}
+
+	// read from sanitized input
+	ifstream in = files::FileService::getInputHandle(this->app_args_.tmpInputFile().c_str());
+	do {
+		// update loop, reset util and ifstream pos
+		in.clear();
+		in.seekg(0, std::ios::beg);
+		iteration++;
+		util.reset();
+
+		// initialize new cesar key
+		app_coder_->setKeyForIteration(iteration);
+
+		// decode input
+		while (getline(in, line)) {
+			processed_line = app_coder_->decode(line);
+			// process decoded line
+			util.processLine(processed_line);
 		}
 
-		// read from sanitized input
-		ifstream in = files::FileService::getInputHandle(this->app_args_.tmpInputFile().c_str());
-		std::cout.precision(__DBL_NORM_MAX__); // Set precision to maximum
-		do {
-			// update loop, reset util and ifstream pos
-			in.clear();
-			in.seekg(0, std::ios::beg);
-			iteration++;
-			util.reset();
+		/* test x^2 */
+		chiSquare = calculateChiSquare(util, enGramsProbability);
 
-			// initialize new cesar key
-			app_coder_->setKeyForIteration(iteration);
+		std::cout << "End of iteration: " << iteration << ", and the critical val is:" << criticalValue << ", current chiSquare is:"
+		          << chiSquare << endl;
+	} while (chiSquare > criticalValue && (this->app_args_.getCoderType() == args::AFFINITY || iteration < 26));
 
-			// decode input
-			while (getline(in, line)) {
-				processed_line = app_coder_->decode(line);
-				// process decoded line
-				util.processLine(processed_line);
-			}
+	if (chiSquare > criticalValue) {
+		std::cout << "Decipher key not found." << endl;
+		return;
+	}
 
-			/* test x^2 */
-			chiSquare = calculateChiSquare(util, enGramsProbability);
+	printDecipherInfo(iteration);
+	decipherAndWriteFinalResult(*app_coder_, in);
 
-			std::cout << "End of iteration: " << iteration << ", and the critical val is:"<< criticalValue << ", current chiSquare is:" << chiSquare << endl;
-		} while (chiSquare > criticalValue && (this->app_args_.getCoderType() == args::AFFINITY || iteration < 26));
+	// close all read/write streams
+	in.close();
+}
 
-		if (chiSquare < criticalValue) {
-			if (this->app_args_.getCoderType() == args::CESAR) {
-				std::cout << "The cesar encoding has been broken, and the key was: " << iteration << endl;
-			} else {
-				std::cout << "The affine encoding has been broken, and the keys were: " << endl;
-				for (const auto &[k, v]: dynamic_cast<AffineCoder*>(this->app_coder_)->getKeysMap()) {
-					std::cout << "Key:" << k << " -> Val:" << v << endl;
-				}
-			}
-
-			decipherAndWriteFinalResult(*app_coder_, in);
-		} else {
-			std::cout << "Decipher key not found." << endl;
+void App::printDecipherInfo(int iteration) const {
+	if (app_args_.getCoderType() == args::CESAR) {
+		cout << "The cesar encoding has been broken, and the key was: " << iteration << endl;
+	} else {
+		cout << "The affine encoding has been broken, and the keys were: " << endl;
+		for (const auto &[k, v]: dynamic_cast<AffineCoder *>(app_coder_)->getKeysMap()) {
+			cout << "Key:" << k << " -> Val:" << v << endl;
 		}
-		// close all read/write streams
-		in.close();
 	}
 }
 
@@ -146,8 +153,17 @@ std::map<std::string, double> App::initializeBaseEnGramsData() {
 	}
 	infile.close();
 
+	const bool scaleDown = total > 100000000;
+	const double scaleFactor = 10000.0;
+	if (scaleDown) {
+		total /= scaleFactor;
+	}
+
+	double probability;
 	for (const auto &[ngram, count]: counter) {
-		double probability = static_cast<double>(count) / static_cast<double>(total);
+		if (scaleDown) {
+			probability = (count / scaleFactor) / static_cast<double>(total);
+		} else probability = static_cast<double>(count) / static_cast<double>(total);
 		probability = std::round(probability * 1000000000.0) / 1000000000.0;
 		probabilityMap.insert({ngram, probability});
 	}
@@ -170,7 +186,7 @@ double App::calculateChiSquare(utils::NgramsUtil &util, const map<std::string, d
 		expected_count = std::round(expected_count * 1000000000.0) / 1000000000.0;
 
 		// X^2 i
-			const auto power = static_cast<double>(std::pow(static_cast<double>(count) - expected_count, 2));
+		const auto power = static_cast<double>(std::pow(static_cast<double>(count) - expected_count, 2));
 
 		const double x_2 = expected_count == 0 ? 0.0 : power / expected_count;
 

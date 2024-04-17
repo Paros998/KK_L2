@@ -43,33 +43,50 @@ namespace enc {
 		return distribution(eng); // Generate the random number
 	}
 
-	std::size_t AffineCoder::calculateMapHash(map<char, char> mapToHash) {
-		int combinedHash = 0;
+	std::size_t AffineCoder::calculateMapHash(map<char, char> &m) {
+		pair_hash elem_hash;
+		std::size_t hash_value = 0;
 
+		// Combine hash values using XOR and multiplication
+		for (const auto &elem : m) {
+			hash_value = (hash_value * 37) ^ elem_hash(elem);
+		}
 
-		return combinedHash;
+		return hash_value;
 	}
 
 	void AffineCoder::setKeyForIteration(int i) {
-		char randomSign;
+		std:size_t keysHash;
+
 		std::map<char, char> keysMap;
 
-		// randomize and set keys map
-		keysMap = std::map<char, char>();
-		vector<char> lettersUsed;
+		// randomize original keysMap not yet tested
+		do {
+			keysMap = randomizeKeyMap(keysMap);
+			keysHash = calculateMapHash(keysMap);
+		} while (std::binary_search(this->used_key_map_hashes_.begin(), this->used_key_map_hashes_.end(), keysHash));
 
-		for (const auto c: this->letters) {
-			randomSign = -1;
-			do {
-				randomSign = randomInRange(65, 90);
-				// FIXME more than 1 letter used as values
-			} while (std::binary_search(lettersUsed.begin(), lettersUsed.end(), randomSign));
-
-			keysMap.insert({c, randomSign});
-			lettersUsed.push_back(randomSign);
-		}
-
+		this->used_key_map_hashes_.push_back(keysHash);
+//		std::sort(this->used_key_map_hashes_.begin(), this->used_key_map_hashes_.end());
 		this->setKeysMap(keysMap);
 	}
 
-	} // enc
+	map<char, char> &AffineCoder::randomizeKeyMap(map<char, char> &keysMap) {
+		char randomSign;
+		keysMap = map<char, char>();
+		vector<int> lettersUsed;
+
+		for (const auto c: letters) {
+			randomSign = -1;
+			do {
+				randomSign = randomInRange(65, 90);
+			} while (binary_search(lettersUsed.begin(), lettersUsed.end(), static_cast<int>(randomSign)));
+
+			keysMap.insert({c, randomSign});
+			lettersUsed.push_back(static_cast<int>(randomSign));
+			sort(lettersUsed.begin(), lettersUsed.end());
+		}
+		return keysMap;
+	}
+
+} // enc

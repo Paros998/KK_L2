@@ -26,6 +26,8 @@ class App {
 	void decipherAndWriteFinalResult(enc::Coder &coder, ifstream &in);
 
 	double sanitizeFileAndProcessMonograms();
+
+	void printDecipherInfo(int iteration) const;
 public:
 	explicit App(args::Arguments app_args);
 
