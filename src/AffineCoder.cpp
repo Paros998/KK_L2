@@ -67,7 +67,7 @@ namespace enc {
 		} while (std::binary_search(this->used_key_map_hashes_.begin(), this->used_key_map_hashes_.end(), keysHash));
 
 		this->used_key_map_hashes_.push_back(keysHash);
-//		std::sort(this->used_key_map_hashes_.begin(), this->used_key_map_hashes_.end());
+		std::sort(this->used_key_map_hashes_.begin(), this->used_key_map_hashes_.end());
 		this->setKeysMap(keysMap);
 	}
 

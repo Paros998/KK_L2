@@ -2,6 +2,8 @@
 // Created by part4 on 21.03.2024.
 //
 
+#include <fenv.h>
+#include <iomanip>
 #include "headers/App.h"
 #include "headers/FileService.h"
 #include "headers/NgramsUtil.h"
@@ -58,8 +60,7 @@ void App::run() {
 }
 
 void App::tryToCrackTheEncoding() {
-	if (this->app_args_.encrypt_mode() != args::NONE && this->app_args_.getCrackEncMode() != args::BRUTE_FORCE
-	    && this->app_args_.getCoderType() == args::NO_CODER) {
+	if (this->app_args_.encrypt_mode() != args::NONE && this->app_args_.getCrackEncMode() != args::BRUTE_FORCE) {
 		return;
 	}
 
@@ -107,8 +108,12 @@ void App::tryToCrackTheEncoding() {
 		chiSquare = calculateChiSquare(util, enGramsProbability);
 
 		std::cout << "End of iteration: " << iteration << ", and the critical val is:" << criticalValue << ", current chiSquare is:"
-		          << chiSquare << endl;
-	} while (chiSquare > criticalValue && (this->app_args_.getCoderType() == args::AFFINITY || iteration < 26));
+		          << std::setprecision (15) << chiSquare << endl;
+
+		if (this->app_args_.getCoderType() == args::CESAR && iteration >= 26) {
+			break;
+		}
+	} while (chiSquare > criticalValue);
 
 	if (chiSquare > criticalValue) {
 		std::cout << "Decipher key not found." << endl;
@@ -153,18 +158,9 @@ std::map<std::string, double> App::initializeBaseEnGramsData() {
 	}
 	infile.close();
 
-	const bool scaleDown = total > 100000000;
-	const double scaleFactor = 10000.0;
-	if (scaleDown) {
-		total /= scaleFactor;
-	}
-
 	double probability;
 	for (const auto &[ngram, count]: counter) {
-		if (scaleDown) {
-			probability = (count / scaleFactor) / static_cast<double>(total);
-		} else probability = static_cast<double>(count) / static_cast<double>(total);
-		probability = std::round(probability * 1000000000.0) / 1000000000.0;
+		probability = static_cast<double>(count) / static_cast<double>(total);
 		probabilityMap.insert({ngram, probability});
 	}
 
@@ -183,15 +179,11 @@ double App::calculateChiSquare(utils::NgramsUtil &util, const map<std::string, d
 
 		// Ei
 		double expected_count = static_cast<double>(totalGrams) * example_probability;
-		expected_count = std::round(expected_count * 1000000000.0) / 1000000000.0;
 
 		// X^2 i
-		const auto power = static_cast<double>(std::pow(static_cast<double>(count) - expected_count, 2));
+		auto power = static_cast<double>(std::pow(static_cast<double>(count) - expected_count, 2));
 
-		const double x_2 = expected_count == 0 ? 0.0 : power / expected_count;
-
-//				 std::cout << "Current testable ngram:" << ngram << " has total count: " << count << " and it's x^2 equals:" << x_2 <<
-//				 std::endl;
+		double x_2 = expected_count == 0 ? 0.0 : power / expected_count;
 
 		// T
 		chi += x_2;
