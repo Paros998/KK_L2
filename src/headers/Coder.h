@@ -34,8 +34,6 @@ namespace enc {
 
 		string encode(const string &in);
 
-		virtual void setKeyForIteration(int i) = 0;
-
 		~Coder() = default;
 	};
 

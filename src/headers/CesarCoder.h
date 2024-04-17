@@ -30,7 +30,7 @@ namespace enc {
 			extractKey();
 		};
 
-		void setKeyForIteration(int i) override {
+		void setKeyForIteration(int i)  {
 			setCesarKey(i);
 		}
 

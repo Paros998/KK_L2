@@ -16,6 +16,13 @@ App::App(args::Arguments app_args) : app_args_(std::move(app_args)) {
 	std::cout << this->app_args_ << endl;
 }
 
+
+void App::run() {
+	processInput();
+
+	tryToCrackTheEncoding();
+}
+
 void App::processInput() {
 	if (this->app_args_.encrypt_mode() == args::NONE) {
 		return;
@@ -53,12 +60,6 @@ void App::processInput() {
 	}
 }
 
-void App::run() {
-	processInput();
-
-	tryToCrackTheEncoding();
-}
-
 void App::tryToCrackTheEncoding() {
 	if (this->app_args_.encrypt_mode() != args::NONE && this->app_args_.getCrackEncMode() != args::BRUTE_FORCE) {
 		return;
@@ -73,68 +74,17 @@ void App::tryToCrackTheEncoding() {
 	// calculate gsl_cdf_chisq_Pinv criticalValue with 0.05 inaccuracy
 	const double criticalValue = gsl_cdf_chisq_Pinv(0.95, totalMonograms);
 
-	// initialize standard vars
-	int iteration = 0;
-	double chiSquare;
-	std::string line, processed_line;
-	utils::NgramsUtil util = utils::NgramsUtil(this->app_args_.getBruteForceNgramsMode());
-
-	if (this->app_args_.getCoderType() == args::CESAR) {
-		this->app_coder_ = new CesarCoder();
-	} else {
-		this->app_coder_ = new AffineCoder();
-	}
-
-	// read from sanitized input
-	ifstream in = files::FileService::getInputHandle(this->app_args_.tmpInputFile().c_str());
-	do {
-		// update loop, reset util and ifstream pos
-		in.clear();
-		in.seekg(0, std::ios::beg);
-		iteration++;
-		util.reset();
-
-		// initialize new cesar key
-		app_coder_->setKeyForIteration(iteration);
-
-		// decode input
-		while (getline(in, line)) {
-			processed_line = app_coder_->decode(line);
-			// process decoded line
-			util.processLine(processed_line);
+	switch (this->app_args_.getCoderType()) {
+		case args::CESAR: {
+			bruteForceCesar(enGramsProbability, criticalValue);
+			return;
 		}
-
-		/* test x^2 */
-		chiSquare = calculateChiSquare(util, enGramsProbability);
-
-		std::cout << "End of iteration: " << iteration << ", and the critical val is:" << criticalValue << ", current chiSquare is:"
-		          << std::setprecision (15) << chiSquare << endl;
-
-		if (this->app_args_.getCoderType() == args::CESAR && iteration >= 26) {
-			break;
+		case args::AFFINITY: {
+			minMaxAffine(enGramsProbability, criticalValue);
+			return;
 		}
-	} while (chiSquare > criticalValue);
-
-	if (chiSquare > criticalValue) {
-		std::cout << "Decipher key not found." << endl;
-		return;
-	}
-
-	printDecipherInfo(iteration);
-	decipherAndWriteFinalResult(*app_coder_, in);
-
-	// close all read/write streams
-	in.close();
-}
-
-void App::printDecipherInfo(int iteration) const {
-	if (app_args_.getCoderType() == args::CESAR) {
-		cout << "The cesar encoding has been broken, and the key was: " << iteration << endl;
-	} else {
-		cout << "The affine encoding has been broken, and the keys were: " << endl;
-		for (const auto &[k, v]: dynamic_cast<AffineCoder *>(app_coder_)->getKeysMap()) {
-			cout << "Key:" << k << " -> Val:" << v << endl;
-		}
+		default:
+			return;
 	}
 }
 
@@ -167,49 +117,6 @@ std::map<std::string, double> App::initializeBaseEnGramsData() {
 	return probabilityMap;
 }
 
-double App::calculateChiSquare(utils::NgramsUtil &util, const map<std::string, double> &probabilityMap) {
-	// N
-	double chi = 0.0;
-	const auto totalGrams = util.getTotal();
-	const auto &tested_text_grams_counter = util.getCounter();
-
-	for (const auto &[ngram, /** Ci */ count]: tested_text_grams_counter) {
-		// Pi
-		double example_probability = probabilityMap.find(ngram)->second;
-
-		// Ei
-		double expected_count = static_cast<double>(totalGrams) * example_probability;
-
-		// X^2 i
-		auto power = static_cast<double>(std::pow(static_cast<double>(count) - expected_count, 2));
-
-		double x_2 = expected_count == 0 ? 0.0 : power / expected_count;
-
-		// T
-		chi += x_2;
-	}
-
-	return chi;
-}
-
-void App::decipherAndWriteFinalResult(enc::Coder &coder, ifstream &in) {
-	std::string line, processed_line;
-
-	// store the current deciphered result into output
-	std::ofstream of = files::FileService::getOutputHandle(this->app_args_.output_file().c_str());
-
-	in.clear();
-	in.seekg(0, std::ios::beg);
-
-	std::cout << "Writing deciphered data to output file." << endl;
-	while (getline(in, line)) {
-		processed_line = coder.decode(line);
-		of << processed_line << endl;
-	}
-
-	of.close();
-}
-
 double App::sanitizeFileAndProcessMonograms() {
 	std::string line;
 	utils::NgramsUtil util = utils::NgramsUtil(this->app_args_.getBruteForceNgramsMode());
@@ -230,4 +137,113 @@ double App::sanitizeFileAndProcessMonograms() {
 	in.close();
 
 	return static_cast<double>(util.getTotal());
+}
+
+void App::bruteForceCesar(const map<std::string, double> &gramsProbability, const double criticalValue) {
+	int iteration = 0;
+
+	double chiSquare;
+	std::string line, processed_line;
+	utils::NgramsUtil util = utils::NgramsUtil(this->app_args_.getBruteForceNgramsMode());
+
+	// read from sanitized input
+	ifstream in = files::FileService::getInputHandle(this->app_args_.tmpInputFile().c_str());
+	CesarCoder coder = CesarCoder();
+
+	do {
+		// update loop, reset util and ifstream pos
+		in.clear();
+		in.seekg(0, std::ios::beg);
+		iteration++;
+		util.reset();
+
+		// initialize new cesar key
+		coder.setKeyForIteration(iteration);
+
+		// decode input
+		while (getline(in, line)) {
+			processed_line = coder.decode(line);
+			// process decoded line
+			util.processLine(processed_line);
+		}
+
+		/* test x^2 */
+		chiSquare = calculateChiSquare(util, gramsProbability);
+
+		std::cout << "End of iteration: " << iteration << ", and the critical val is:" << criticalValue << ", current chiSquare is:"
+		          << chiSquare << endl;
+	} while (chiSquare > criticalValue && iteration < 26);
+
+	if (chiSquare > criticalValue) {
+		std::cout << "Decipher key not found." << endl;
+		return;
+	}
+
+	std::cout << "The cesar encoding has been broken, and the key was: " << iteration << endl;
+
+	decipherAndWriteFinalResult(coder, in);
+
+	// close all read/write streams
+	in.close();
+}
+
+void App::minMaxAffine(const map<std::string, double> &gramsProbability, const double criticalValue) {
+	double chiSquare;
+	std::string line, processed_line;
+	utils::NgramsUtil util = utils::NgramsUtil(this->app_args_.getBruteForceNgramsMode());
+
+	// read from sanitized input
+	ifstream in = files::FileService::getInputHandle(this->app_args_.tmpInputFile().c_str());
+	AffineCoder coder = AffineCoder();
+	auto resolvedKeyMap = map<char, char>();
+
+	for (auto letter: coder.getLetters()) {
+		char resolvedChar = coder.minMaxForKey(letter, gramsProbability, util, in);
+		resolvedKeyMap.insert({letter, resolvedChar});
+	}
+
+	coder.setKeysMap(resolvedKeyMap);
+
+	// decode input
+	while (getline(in, line)) {
+		processed_line = coder.decode(line);
+		// process decoded line
+		util.processLine(processed_line);
+	}
+
+	/* test x^2 */
+	chiSquare = calculateChiSquare(util, gramsProbability);
+
+	if (chiSquare > criticalValue) {
+		std::cout << "Decipher key not found." << endl;
+		return;
+	}
+
+	std::cout << "The affine encoding has been broken, and the keys were: " << endl;
+	for (const auto &[k, v]: coder.getKeysMap()) {
+		std::cout << "Key:" << k << " -> Val:" << v << endl;
+	}
+
+	decipherAndWriteFinalResult(coder, in);
+
+	// close all read/write streams
+	in.close();
+}
+
+void App::decipherAndWriteFinalResult(enc::Coder &coder, ifstream &in) {
+	std::string line, processed_line;
+
+	// store the current deciphered result into output
+	std::ofstream of = files::FileService::getOutputHandle(this->app_args_.output_file().c_str());
+
+	in.clear();
+	in.seekg(0, std::ios::beg);
+
+	std::cout << "Writing deciphered data to output file." << endl;
+	while (getline(in, line)) {
+		processed_line = coder.decode(line);
+		of << processed_line << endl;
+	}
+
+	of.close();
 }

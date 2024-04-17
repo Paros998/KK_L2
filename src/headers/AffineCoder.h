@@ -7,28 +7,12 @@
 
 #include "Libraries.h"
 #include "Coder.h"
+#include "NgramsUtil.h"
+#include "App.h"
 
 namespace enc {
-	struct pair_hash {
-		template<class T1, class T2>
-		std::size_t operator () (const std::pair<T1,T2> &pair) const {
-			auto hash1 = my_hash<T1>{}(pair.first);
-			auto hash2 = std::hash<T2>{}(pair.second);
-			return hash1 ^ (hash2 + 0x9e3779b9 + (hash1 << 6) + (hash1 >> 2)); // Improved combining hash function
-		}
-
-	private:
-		// Custom hash function for const char keys
-		template<typename T>
-		struct my_hash {
-			std::size_t operator () (T key) const {
-				return static_cast<std::size_t>(key);
-			}
-		};
-	};
 
 	class AffineCoder : public Coder {
-		vector<std::size_t> used_key_map_hashes_;
 		vector<char> letters;
 		map<char, char> keys_map_{};
 
@@ -37,16 +21,6 @@ namespace enc {
 		[[nodiscard]] char decodeChar(char in) const override;
 
 		void readKeys();
-
-		void setKeysMap(const map<char, char> &keysMap) {
-			this->keys_map_ = keysMap;
-		}
-
-		int randomInRange(int min, int max);
-
-		size_t calculateMapHash(map<char, char> &mapToHash);
-
-		map<char, char> &randomizeKeyMap(map<char, char> &keysMap);
 
 	public:
 		explicit AffineCoder() {
@@ -63,7 +37,24 @@ namespace enc {
 			return keys_map_;
 		}
 
-		void setKeyForIteration(int i) override;
+		const vector<char> &getLetters() const {
+			return letters;
+		}
+
+		void setKeysMap(const map<char, char> &keysMap) {
+			this->keys_map_ = keysMap;
+		}
+
+		std::map<char, char> initializeBasicKeyMap() {
+			auto keys = map<char, char>();
+			for (auto c: letters) {
+				keys.insert({c, c});
+				keys[c] = c;
+			}
+			return keys;
+		}
+
+		char minMaxForKey(const char key, const map<string, double>& probabilityMap, utils::NgramsUtil &util, ifstream &in);
 
 		~AffineCoder() = default;
 
