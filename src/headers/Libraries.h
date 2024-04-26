@@ -1,28 +1,27 @@
-//
-// Created by part4 on 13.03.2024.
-//
+// File: libraries.h
+// This header file seems to serve as a container for all included libraries.
+// It can be useful to avoid repeating the inclusion of the same libraries in different source files.
 
 #pragma once
 
-#include <iostream>
-#include <fstream>
-#include <ostream>
+// Including standard and external libraries
+#include <iostream>     // Standard input-output
+#include <fstream>      // File handling
+#include <string>       // String manipulation
 
-#include <string>
+#include <map>          // Map data structure
+#include <ranges>       // Ranges library (C++20)
 
-#include <map>
-#include <ranges>
+#include <cstdint>      // Fixed-width integer types
 
-#include <cstdint>
+#include <cmath>        // Mathematical functions
+#include <vector>       // Vectors
+#include <random>       // Random number generators
+#include <algorithm>    // General algorithms
 
-#include <cmath>
-#include <vector>
-#include <random>
-#include <algorithm>
+#include <boost/functional.hpp> // Boost library
 
-#include <boost/functional.hpp>
-
-#include "gsl/gsl_cdf.h"
+#include "gsl/gsl_cdf.h"       // GSL (GNU Scientific Library) - Cumulative Distribution Functions
 
 #ifndef LIBRARIES_H
 #define LIBRARIES_H

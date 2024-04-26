@@ -6,27 +6,31 @@
 
 namespace args {
 
+	// Constructor for Arguments class to parse command-line arguments
 	Arguments::Arguments(int const argc, char const *argv[]) {
-		bool encryptionModeIntitialized = false;
+		bool encryptionModeInitialized = false;
 		bool coderSpecified = false;
 
+		// Iterate through command-line arguments
 		for (int j = 1; j < argc; ++j) {
 			const auto argument = argv[j];
 
+			// Iterate through defined flags
 			for (const auto &key: FLAGS | std::views::keys) {
 				if (argument == key) {
 					switch (FLAGS[key]) {
 						case e: {
 							this->encrypt_mode_ = ENCRYPT;
-							encryptionModeIntitialized = true;
+							encryptionModeInitialized = true;
 							break;
 						}
 						case d: {
 							this->encrypt_mode_ = DECRYPT;
-							encryptionModeIntitialized = true;
+							encryptionModeInitialized = true;
 							break;
 						}
 						case i: {
+							// Check if the next argument is a file name
 							if (std::string value = argv[++j]; !value.starts_with('-')) {
 								this->inputFile_ = value;
 								break;
@@ -34,6 +38,7 @@ namespace args {
 							throw std::invalid_argument("Input file not specified.");
 						}
 						case o: {
+							// Check if the next argument is a file name
 							if (std::string value = argv[++j]; !value.starts_with('-')) {
 								this->outputFile_ = value;
 								break;
@@ -41,6 +46,7 @@ namespace args {
 							throw std::invalid_argument("Output file not specified.");
 						}
 						case k: {
+							// Check if the next argument is a file name
 							if (j + 1 < argc) {
 								if (std::string value = argv[++j]; !value.starts_with('-')) {
 									this->keyFile_ = value;
@@ -101,10 +107,10 @@ namespace args {
 				}
 			}
 		}
-		if (!encryptionModeIntitialized && !coderSpecified && this->crack_mode_ == NO_CRACK) {
+
+		// Check if encryption mode, coder type, and crack mode are specified
+		if (!encryptionModeInitialized && !coderSpecified && this->crack_mode_ == NO_CRACK) {
 			throw std::invalid_argument("Encrypt/Decrypt mode not specified. Check program parameters.");
 		}
 	}
-
-
-} // args
+}

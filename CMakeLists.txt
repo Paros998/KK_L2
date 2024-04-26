@@ -14,6 +14,10 @@ set(Boost_ROOT "./libs/boost_1_85_0")
 find_package(GSL REQUIRED)
 find_package(Boost REQUIRED)
 
+if(GSL_FOUND)
+    message(STATUS "GSL found: ${GSL_INCLUDE_DIRS}")
+endif ()
+
 if(Boost_FOUND)
     message(STATUS "Boost found: ${Boost_INCLUDE_DIRS}")
 endif ()

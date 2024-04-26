@@ -1,18 +1,20 @@
-//
-// Created by part4 on 13.03.2024.
-//
-
+// File created on: 13.03.2024
+// Header guard to prevent multiple inclusion of this header file
 #ifndef ARGUMENTS_H
 #define ARGUMENTS_H
 
+// Including necessary header files
 #include "Libraries.h"
 
+// Namespace for handling command line arguments
 namespace args {
+	// File paths for English n-grams data
 	static const std::string EnMonogramsFile = "../data/grams/english_monograms.txt";
 	static const std::string EnBigramsFile = "../data/grams/english_bigrams.txt";
 	static const std::string EnTrigramsFile = "../data/grams/english_trigrams.txt";
 	static const std::string EnQuadgramsFile = "../data/grams/english_quadgrams.txt";
 
+	// Command line flags
 	static const std::string D_FLAG = "-d";
 	static const std::string E_FLAG = "-e";
 	static const std::string I_FLAG = "-i";
@@ -26,10 +28,12 @@ namespace args {
 	static const std::string N3_FLAG = "-n3";
 	static const std::string N4_FLAG = "-n4";
 
+	// Enumeration for command line flags
 	enum flag {
 		d, e, i, k, o, a, ca, cc, n1, n2, n3, n4
 	};
 
+	// Map for command line flags and their corresponding enum values
 	static std::map<std::string, flag> FLAGS = {
 			{D_FLAG, d},
 			{E_FLAG, e},
@@ -45,32 +49,38 @@ namespace args {
 			{N4_FLAG, n4}
 	};
 
+	// Enumeration for encoder types
 	enum CoderType {
 		NO_CODER, CESAR, AFFINITY
 	};
 
+	// Enumeration for encryption modes
 	enum EncryptMode {
 		NONE, ENCRYPT, DECRYPT
 	};
 
+	// Enumeration for crack encoding modes
 	enum CrackEncMode {
 		NO_CRACK, BRUTE_FORCE
 	};
 
+	// Class to handle command line arguments
 	class Arguments {
-		EncryptMode encrypt_mode_ = EncryptMode::NONE;
-		CrackEncMode crack_mode_ = CrackEncMode::NO_CRACK;
-		CoderType coder_type_ = CoderType::NO_CODER;
-		int brute_force_ngrams_mode = -1;
-		std::string brute_force_ngrams_file;
-		std::string inputFile_;
-		std::string tmpInputFile_ = "../data/tmp.txt";
-		std::string outputFile_;
-		std::string keyFile_;
+		EncryptMode encrypt_mode_ = EncryptMode::NONE; // Encryption mode
+		CrackEncMode crack_mode_ = CrackEncMode::NO_CRACK; // Crack encoding mode
+		CoderType coder_type_ = CoderType::NO_CODER; // Encoder type
+		int brute_force_ngrams_mode = -1; // Brute force n-grams mode
+		std::string brute_force_ngrams_file; // Brute force n-grams file path
+		std::string inputFile_; // Input file path
+		std::string tmpInputFile_ = "../data/tmp.txt"; // Temporary input file path
+		std::string outputFile_; // Output file path
+		std::string keyFile_; // Key file path
 
 	public:
+		// Constructor to initialize arguments based on command line inputs
 		Arguments(int argc, char const *argv[]);
 
+		// Getter methods for various arguments
 		[[nodiscard]] EncryptMode encrypt_mode() const {
 			return encrypt_mode_;
 		}
@@ -107,6 +117,7 @@ namespace args {
 			return brute_force_ngrams_file;
 		}
 
+		// Overloaded stream insertion operator to print argument values
 		friend std::ostream &operator<<(std::ostream &os, const Arguments &obj) {
 			return os
 					<< "[" << std::endl
